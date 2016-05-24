@@ -1,2 +1,4 @@
-# glaucia86.github.io
-GH Pages de projetos pessoais desenvolvidos e alocados no GitHub para realização de Demos
+# Projeto Gem Store - Shaping Up With Angular.Js 
+
+Demo do projeto desenvolvido durante o curso de Angular.Js do site CodeSchool.
+
