@@ -1,40 +1,49 @@
+<!--Lista de Reviews dos Produtos-->
 <ul>
-    <h4>Reviews</h4>
-    <li ng-repeat="review in product.reviews">
-      <blockquote>
-        <strong>{{review.stars}} Stars:</strong>
-        {{review.body}}
-        <cite class="clearfix">-{{review.author}} On {{review.createdOn | date}}</cite>
-      </blockquote>
-    </li>
-  </ul>
-  <!--Fim da Lista de Reviews dos Produtos-->
-
-  <!--Início do Form da Review-->
-  <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)">
-
-    <!--Apresentação das Reviews-->
+  <h4>Reviews</h4>
+  <li ng-repeat="review in product.reviews">
     <blockquote>
-      <strong>{{reviewCtrl.review.stars}} Stars</strong>
+      <strong>{{review.stars}} Stars:</strong>
       {{review.body}}
-      <cite class="clearfix">-{{reviewCtrl.review.author}}</cite>
+      <cite class="clearfix">-{{review.author}} On {{review.createdOn | date}}</cite>
     </blockquote>
+  </li>
+</ul>
+<!--Fim da Lista de Reviews dos Produtos-->
 
-    <!--Início do Form da Review-->
-    <h4>Envie uma Review</h4>
-    <fieldset class="form-group">
-      <select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" required>
-        <option value="">Pontuação do Produto</option>
-      </select>
-    </fieldset>
-    <fieldset class="form-group">
-      <textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Escreva uma pequena Review sobre o produto" title="Review" required></textarea>
-    </fieldset>
-    <fieldset class="form-group">
-      <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="example@gmail.com" title="Email" required/>
-    </fieldset>
-    <fieldset class="form-group">
-      <input type="submit" class="btn btn-primary pull-right" value="Enviar Review">
-    </fieldset>
-  </form>
-  <!--Fim do Form da Review-->	
+<!--Início do Form da Review-->
+<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)">
+
+  <!-- Apresentação das Reviews realizadas no site -->
+  <blockquote>
+    <strong>{{reviewCtrl.review.stars}} Stars</strong>
+    {{reviewCtrl.review.body}}
+    <cite class="clearfix">-{{reviewCtrl.review.author}}</cite>
+  </blockquote>
+
+  <!-- Inicio do Form da Review -->
+  <h4>Envie uma Review</h4>
+  
+  <!-- Campo do form = Pontuação do Produto -->
+  <fieldset class="form-group">
+    <select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" required>
+      <option value="">Pontuação do Produto</option>
+    </select>
+  </fieldset>
+
+  <!-- Campo do form = Review do Produto -->
+  <fieldset class="form-group">
+    <textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Escreva uma pequena Review sobre o produto" title="Review" required></textarea>
+  </fieldset>
+
+  <!-- Campo do form = Email do cliente -->
+  <fieldset class="form-group">
+    <input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="example@gmail.com" title="Email" required/>
+  </fieldset>
+
+  <!-- Campo do form = botão de enviar -->
+  <fieldset class="form-group">
+    <input type="submit" class="btn btn-primary pull-right" value="Enviar Review">
+  </fieldset>
+</form>
+<!--Fim do Form da Review-->

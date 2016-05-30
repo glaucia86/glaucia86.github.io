@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="content/style.css" />
     <script type="text/javascript" src="scripts/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="products.js"></script>
   </head>
   <body class="list-group bodyBackgroundColor" ng-controller="StoreController as store">
 
@@ -26,13 +25,13 @@
     <!--Container dos Produtos--> 
     <div class="list-group">
 
-      <!-- Container do Produto Atual --> 
+      <!-- Container do Produto Atual -->	
       <div class="list-group-item" ng-repeat="product in store.products">
         <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
 
-        <!-- Galeria de Imagens-->
+        <!--Galeria de Imagens-->
         <product-gallery></product-gallery>
-        
+
         <!-- Product Tabs  -->
         <product-tabs></product-tabs>
       </div>

@@ -13,16 +13,11 @@
   <!--Fim da seção das Tabs dos Produtos-->
 
   <!-- Início da Tab de Descrição do Produto -->
-  <div ng-show="tab.isSet(1)" ng-include="product-descriptions.html">
-  </div>
-  <!-- Fim da Tab de Descrição do Produto -->
+  <div ng-show="tab.isSet(1)" ng-include="'product-description.html'"></div>
 
   <!-- Início da Tab de Especificações do Produto -->
-  <div product-specs ng-show="tab.isSet(2)">
-  </div>
-  <!-- Fim da Tab de Especificações do Produto -->
+  <div product-specs ng-show="tab.isSet(2)"></div>
 
   <!-- Início da Tab de Reviews do Produto -->
   <product-reviews ng-show="tab.isSet(3)"></product-reviews>
-  <!-- Fim da Tab de Reviews do Produto -->
 </section>
