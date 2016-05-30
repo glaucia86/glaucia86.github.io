@@ -1,47 +1,23 @@
 (function() {
-	var app = angular.module('gemStore', []);
+	var app = angular.module('gemStore', ['store-directives']);
 
   /* Controlador dos Produtos */
 	app.controller('StoreController', function() {
 		this.products = gems;
 	});
 
-  /* Controlador das Tab's */
-	app.controller('TabController', function() {
-		this.tab = 1;
-
-    /* Função para poder 'setar' uma tab */
-		this.setTab = function(newValue) {
-			this.tab = newValue;
-		};
-
-    /* Função para poder atribuir a tab de acordo com o nome da Tab clicada. */
-		this.isSet = function(tabName) {
-			return this.tab === tabName;
-		};
-	});
-
-  /* Controlador das Imagens dos Produtos */
-	app.controller('GalleryController', function() {
-		this.current = 0;
-
-    /* Função para poder 'setar' as imagens dos produtos */
-		this.setCurrent = function(newGallery) {
-			this.current = newGallery || 0;
-		};
-	});
-
   /* Controlador das Reviews dos produtos */
-  app.controller('ReviewController', function() {
+  app.controller('ReviewController' , function() {
 
-    this.review = {}; 
+    this.review = {};
 
     /* Função para poder adicionar uma nova review de um determinado produto */
     this.addReview = function(product) {
+
       this.review.createdOn = Date.now();
       product.reviews.push(this.review);
 
-      /* Limpar os campos do formulário da 'Review' */
+      /* Limpar os campos das reviews */
       this.review = {};
     };
   });

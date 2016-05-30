@@ -14,7 +14,6 @@ body {
 a {
   color: #ac005f;
 }
-
 a:hover,
 a:focus {
   text-decoration: underline;
