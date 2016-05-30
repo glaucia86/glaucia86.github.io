@@ -3,9 +3,18 @@ body {
   margin: 0 auto;
 }
 
+.ng-invalid.ng-dirty {
+  border-color: red;
+}
+
+.ng-valid.ng-dirty {
+  border-color: green;
+}
+
 a {
   color: #ac005f;
 }
+
 a:hover,
 a:focus {
   text-decoration: underline;

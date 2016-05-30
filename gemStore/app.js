@@ -38,6 +38,7 @@
 
     /* Função para poder adicionar uma nova review de um determinado produto */
     this.addReview = function(product) {
+      this.review.createdOn = Date.now();
       product.reviews.push(this.review);
 
       /* Limpar os campos do formulário da 'Review' */

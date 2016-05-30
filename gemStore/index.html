@@ -88,14 +88,14 @@
 					<blockquote>
 						<strong>{{review.stars}} Stars:</strong>
 						{{review.body}}
-						<cite class="clearfix">-{{review.author}}</cite>
+						<cite class="clearfix">-{{review.author}} On {{review.createdOn | date}}</cite>
 					</blockquote>	
 				</li>
 			</ul>
 			<!--Fim da Lista de Reviews dos Produtos-->
 
 			<!--Início do Form da Review-->
-			<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+			<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)">
 				<blockquote>
 				<strong>{{reviewCtrl.review.stars}} Stars</strong>
 				{{review.body}}
@@ -104,17 +104,17 @@
 
 				<h4>Envie uma Review</h4>
 				<fieldset class="form-group">
-					<select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
+					<select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" required>
 						<option value="">Pontuação do Produto</option>
 					</select>
 				</fieldset>
 
 				<fieldset class="form-group">
-					<textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Escreva uma pequena Review sobre o produto" title="Review"></textarea>
+					<textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Escreva uma pequena Review sobre o produto" title="Review" required></textarea>
 				</fieldset>
 
 				<fieldset class="form-group">
-					<input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="example@gmail.com" title="Email"/>
+					<input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="example@gmail.com" title="Email" required/>
 				</fieldset>
 
 				<fieldset class="form-group">
