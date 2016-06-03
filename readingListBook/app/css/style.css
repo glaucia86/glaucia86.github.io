@@ -1,0 +1,164 @@
+/*Super specific selectors were used in this file to be sure and override any bootstrap madness.*/
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+/*ADDED IN*/
+
+.btn:focus {
+  outline: none;
+}
+
+.book {
+  margin-bottom: 40px;
+}
+
+li.book > aside p.rating {
+  color: #7A292A;
+  font-size: 1.2em;
+}
+
+.book .rating.goodRating {
+  color: #499130;
+}
+
+book-cover {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.live-preview {
+  float: right;
+  width: 48%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.live-preview > aside, li.book > aside {
+  padding: 0;
+}
+
+.live-preview > aside img, li.book > aside img {
+  width: 100%;
+}
+
+.live-preview > aside p, li.book .rating {
+  margin: 0 5%;
+  padding: 0.1em;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 0 0 0.5em 0.5em;
+  border-top-width: 0;
+  color: #888;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.live-preview > aside + div > h3, li.book > aside + div > h3 {
+  margin-top: 0;
+}
+
+.live-preview > aside + div li, li.book > aside + div li {
+  float: left;
+  margin-right: 1px;
+}
+
+.input-container {
+  float: left;
+  width: 48%;
+}
+
+form[name="reviewForm"] {
+  overflow: hidden;
+}
+
+label{
+  margin-right: 15px;
+}
+
+.button-from-hell {
+  padding: 0;
+}
+
+.button-from-hell button {
+  float: right;
+}
+
+div.genre {
+  float: left;
+  width: 75%;
+  margin: 0;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+.genre-label {
+  float: left;
+  width: 50%;
+  margin: 0;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  text-tranform: capitalize;
+  white-space: nowrap;
+}
+
+.genre-label:hover {
+  border-color: #ddd;
+  color: #888;
+}
+
+.genre-label:active {
+  border-color: #999;
+  color: #222;
+}
+
+@media (max-width: 768px) {
+  .input-container, .live-preview {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  div.genre {
+    width: 100%;
+    padding: 0;
+  }
+
+  .live-preview > aside, li.book > aside {
+    float: left;
+    width: 25%;
+    margin-right: 15px;
+  }
+
+  li.book {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
