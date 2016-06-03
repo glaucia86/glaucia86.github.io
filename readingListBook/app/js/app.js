@@ -20,7 +20,6 @@ app.controller('ReadingListController', function(){
 			title: 'A Game of Thrones: A Song of Ice and Fire',
 			author: 'George R.R. Martin',
 			isbn: '0553593714',
-			img: '51Y82FEgx7L',
 			review: 'A saga mais criativa e divertida dos últimos tempos - garante uma grande introdução ao mundo da fantasia. Eu amei esse livro!',
 			rating: 4,
 			genres: { 'não-ficção': true, fantasy: true }
