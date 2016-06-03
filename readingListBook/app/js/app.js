@@ -1,5 +1,6 @@
-(function() {
 'use strict';
+
+(function() {
 
 // Declare app level module which depends on views, and components
 var app = angular.module('readingListBook', []);
