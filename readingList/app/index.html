@@ -1,0 +1,60 @@
+  <!DOCTYPE html>
+  <!--[if lt IE 7]>      <html lang="en" ng-app="readingList" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+  <!--[if IE 7]>         <html lang="en" ng-app="readingList" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+  <!--[if IE 8]>         <html lang="en" ng-app="readingList" class="no-js lt-ie9"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html lang="pt-br" ng-app="readingListBook" class="no-js"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title>Top Livros Incríveis - Glaucia Lemos</title>
+
+    <!-- Referências do Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Referências de Scripts -->
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h1>Os Top Livros Mais Incríveis!</h1>
+    </div>
+    <div class="container">      
+      <div class="row" ng-controller="ReadingListController as readingListCtrl">
+      <button class="btn btn-default">Criar Review &nbsp;<i class="fa fa-plus" aria-hidden="true"></i></button>
+      <hr/>
+
+      <ul class="list-unstyled col-sm-8">
+        <li class="book row" ng-repeat="book in readingListCtrl.books">
+          <aside class="col-sm-3">
+            <a href="http://www.amazon.com/gp/product/{{book.isbn}}"><img ng-src="http://images.amazon.com/images/P/{{book.isbn}}.01.ZTZZZZZZ.jpg" alt="Cover of {{book.title}}" class="full"></a>
+            <p class="goodRating rating">{{book.rating}}/5</p>
+          </aside>
+          <div class="col-sm-9">
+            <h3>
+              <a href="http://www.amazon.com/gp/product/{{book.isbn}}">{{book.title}}</a>
+            </h3>
+            <cite class="text-muted">Escrito por {{book.author}}</cite>
+            <p>{{book.review}}</p>
+ 
+            <ul class="list-unstyled">
+              <!-- Review com Notas: 4 -->
+              <li>
+                <span class="label label-primary" ng-repeat="(genre, state) in book.genres" ng-show="state">{{genre}}</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </body>
+</html>
+
+<!-- Testando o commit!! -->
