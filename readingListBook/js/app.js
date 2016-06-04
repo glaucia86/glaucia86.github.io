@@ -3,13 +3,29 @@
 (function(){
 
 	/*Declaração do módulo da aplicação */
-	var app = angular.module('readingListBook', []);
+	angular.module('readingListBook', [])
 
 	/* Controlador responsável pela leitura de dados dos Livros */
-	app.controller('ReadingListController', function(){
+	.controller('ReadingListController', function() {
 		this.genres = genres;
 		this.books = books;
+	})
+
+	.directive('bookGenres', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'partials/book-genres.html'
+		}
+	})
+
+	.directive('bookCover', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'partials/book-cover.html',
+			replace: true
+		}
 	});
+
 
 	/* Declaração de dados de exemplo a serem inseridos no projeto */
 	var genres = ['fantasia', 'ficção', 'fábulas', 'infantis', 'romance', 'folclore', 'horror', 'lenda', 'mistério', 'mitologia', 'não-ficção', 'poesia', 'romance'];
