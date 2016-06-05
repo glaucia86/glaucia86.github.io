@@ -1,0 +1,83 @@
+<form name="reviewForm" class="form-horizontal" ng-submit="reviewFormController.addReview(reviewForm)">
+
+	<section class="row well live-preview" ng-show="reviewFormController.book.isbn">
+		<aside class="col-sm-3">
+			<a href="http://www.amazon.com/gp/product/{{reviewFormController.book.isbn}}">
+				<img src="http://images.amazon.com/images/P/{{reviewFormController.book.isbn}}.01.ZTZZZZZZ.jpg" alt="Cover of {{reviewFormController.book.title}}" class="full">
+			</a>	
+			<p>{{reviewFormController.book.rating}}/5</p>
+		</aside>	
+
+		<div class="col-sm-9">
+			<h3>
+				<a href="http://www.amazon.com/gp/product/{{reviewFormController.book.isbn}}">
+					{{reviewFormController.book.title}}
+				</a>
+			</h3>
+			<cite class="text-muted">Escrito por {{reviewFormController.book.author}}</cite>
+			<p>{{reviewFormController.book.review}}</p>
+			
+			<book-genres genres="book.genres"></book-genres>
+		</div>
+	</section>
+	
+	<!-- Início dos campos a serem preenchidos no form -->
+	<div class="input-container">
+		<fieldset class="form-group">
+			<label for="title" class="col-sm-2 control-label">Título:</label>
+			<span class="col-sm-9">
+				<input type="text" class="form-control" id="title" placeholder="Título do Livro" ng-model="reviewFormController.book.title">
+			</span>
+		</fieldset>
+
+		<fieldset class="form-group">
+			<label for="isbn" class="col-sm-2 control-label">ISBN:</label>
+			<span class="col-sm-9">
+				<input type="text" class="form-control" id="isbn" placeholder="ISBN-10" ng-model="reviewFormController.book.isbn" >
+			</span>
+		</fieldset>
+
+		<fieldset class="form-group">
+			<label for="author" class="col-sm-2 control-label">Autor:</label>
+			<span class="col-sm-9">
+				<input type="text" class="form-control" id="author" placeholder="Nome do Autor" ng-model="reviewFormController.book.author" >
+			</span>
+		</fieldset>
+
+		<fieldset class="form-group">
+			<label for="review" class="control-label col-sm-2">Review:</label>
+			<span class="col-sm-9">
+				<textarea id="review" class="form-control" cols="30" rows="3" placeholder="Review do Livro" ng-model="reviewFormController.book.review" ></textarea>
+			</span>
+		</fieldset>
+
+		<!-- Campo que trata a lista de ratind dos livros -->
+		<fieldset class="form-group">
+			<label for="rating" class="control-label col-sm-2">Rating:</label>
+			<span class="col-sm-9">
+				<select class="form-control" id="rating" value="5" ng-model="reviewFormController.book.rating">
+					<option>5</option>
+					<option>4</option>
+					<option>3</option>
+					<option>2</option>
+					<option>1</option>
+				</select>
+			</span>
+		</fieldset>
+
+		<fieldset class="form-group">
+			<label class="form-label col-sm-2">Gênero:</label>
+			<div class="genre">
+				<label for="{{genre}}" class="genre-label form-control" ng-repeat="genre in genres">
+					<input type="checkbox" name="genre" id="{{genre}}" ng-model="reviewFormController.book.genres[genre]">{{genre}}
+				</label>
+			</div>
+		</fieldset>
+
+		<fieldset class="form-group">
+			<span class="col-sm-9 col-sm-offset-2 button-from-hell">
+				<button class="btn btn-primary">Salvar Review &nbsp;<i class="fa fa-check"></i></button>
+			</span>
+		</fieldset>
+	</div>
+</form>

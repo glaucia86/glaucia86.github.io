@@ -1,6 +1,6 @@
 'use strict';
 
-(function(){
+(function() {
 
 	/*Declaração do módulo da aplicação */
 	angular.module('readingListBook', [])
@@ -11,21 +11,51 @@
 		this.books = books;
 	})
 
+	/* Diretiva para os Gêneros dos Livros */
 	.directive('bookGenres', function() {
 		return {
 			restrict: 'E',
-			templateUrl: 'partials/book-genres.html'
+			templateUrl: 'partials/book-genres.html',
+			scope: {
+				genres: '='	
+			}
 		}
 	})
 
+	/* Diretiva para a 'Cover dos Livros' */
 	.directive('bookCover', function() {
 		return {
 			restrict: 'E',
 			templateUrl: 'partials/book-cover.html',
 			replace: true
 		}
-	});
+	})
 
+	/* Diretiva para o Form das Reviews */
+	.directive('reviewForm', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'partials/review-form.html',
+			replace: true,
+			controller: function() {
+				this.showForm = false;
+				this.book = {genres:{}};
+
+				/* Função para poder adicionar uma nova review no formulário */
+				this.addReview = function(form) {
+					books.push(this.book);
+					this.book = {genres:{}};
+					
+					form.$setPristine();
+				}
+			},
+			controllerAs: 'reviewFormController',
+			scope: {
+				books:'=',
+				genres: '='
+			}
+		}
+	});
 
 	/* Declaração de dados de exemplo a serem inseridos no projeto */
 	var genres = ['fantasia', 'ficção', 'fábulas', 'infantis', 'romance', 'folclore', 'horror', 'lenda', 'mistério', 'mitologia', 'não-ficção', 'poesia', 'romance'];

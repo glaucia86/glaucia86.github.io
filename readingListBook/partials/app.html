@@ -1,0 +1,29 @@
+<!-- Inicio das informações sobre o conteúdo do Livro -->
+<div class="row" ng-controller="ReadingListController as readingListController">
+
+  <button class="btn btn-default" ng-click="reviewFormController.showForm = !reviewFormController.showForm">{{reviewFormController.showForm ? "Cancelar" : "Criar Review"}}&nbsp;<i class="fa fa-plus"></i></button>
+  <hr/>
+
+  <!-- Formulário das Reviews do Livro -->
+  <review-form books="ReadingListController.books" genres="ReadingListController.genres" ng-show="reviewFormController.showForm"></review-form>
+  <hr/>
+
+  <ul class="list-unstyled col-sm-8">
+    <li class="book row" ng-repeat="book in readingListController.books">
+
+      <!--Cover book-->
+      <book-cover></book-cover>
+      
+      <div class="col-sm-9">
+        <h3>
+          <a href="http://www.amazon.com/gp/product/{{book.isbn}}">{{book.title}}</a>
+        </h3>
+        <cite class="text-muted">Escrito por {{book.author}}</cite>
+        <p>{{book.review}}</p>
+
+        <!-- Book Genres -->
+        <book-genres genres="book.genres"></book-genres>
+      </div>
+    </li>
+  </ul>
+</div>
