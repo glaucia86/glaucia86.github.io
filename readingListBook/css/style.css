@@ -18,9 +18,13 @@
   display: inline;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+.footer {
+  background: #bdbdbd;
+  bottom: 0;
+  height: auto;
+  padding-bottom: 50px;
+  position: relative;
+  width: 100%;
 }
 
 .menu > li:nth-child(1):before {

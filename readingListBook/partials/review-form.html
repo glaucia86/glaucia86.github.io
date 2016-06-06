@@ -17,7 +17,13 @@
 			<cite class="text-muted">Escrito por {{reviewFormController.book.author}}</cite>
 			<p>{{reviewFormController.book.review}}</p>
 			
-			<book-genres genres="book.genres"></book-genres>
+			<book-genres genres="readingListController.book.genres"></book-genres>
+			<!--
+			<ul class="list-unstyled">
+				<li ng-repeat="(genre, state) in reviewFormController.book.genres">
+					<span class="label label-primary">{{genre}}</span>
+				</li>
+			</ul> -->
 		</div>
 	</section>
 	
@@ -66,10 +72,10 @@
 		</fieldset>
 
 		<fieldset class="form-group">
-			<label class="form-label col-sm-2">Gênero:</label>
+			<label class="control-label col-sm-2">Gênero:</label>
 			<div class="genre">
 				<label for="{{genre}}" class="genre-label form-control" ng-repeat="genre in genres">
-					<input type="checkbox" name="genre" id="{{genre}}" ng-model="reviewFormController.book.genres[genre]">{{genre}}
+					<input type="checkbox" name="genre" id="{{genre}}" ng-model="reviewFormController.book.genres[genre]" />&nbsp;{{genre}}
 				</label>
 			</div>
 		</fieldset>

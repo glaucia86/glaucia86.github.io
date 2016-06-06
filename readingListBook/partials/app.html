@@ -5,7 +5,7 @@
   <hr/>
 
   <!-- Formulário das Reviews do Livro -->
-  <review-form books="ReadingListController.books" genres="ReadingListController.genres" ng-show="reviewFormController.showForm"></review-form>
+  <review-form ng-show="reviewFormController.showForm" books="ReadingListController.books" genres="ReadingListController.genres"></review-form>
   <hr/>
 
   <ul class="list-unstyled col-sm-8">
@@ -19,9 +19,11 @@
           <a href="http://www.amazon.com/gp/product/{{book.isbn}}">{{book.title}}</a>
         </h3>
         <cite class="text-muted">Escrito por {{book.author}}</cite>
+
+        <!-- Reviews dos Livros -->
         <p>{{book.review}}</p>
 
-        <!-- Book Genres -->
+        <!-- Gêneros dos Livros -->
         <book-genres genres="book.genres"></book-genres>
       </div>
     </li>
