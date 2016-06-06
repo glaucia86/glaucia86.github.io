@@ -1,5 +1,4 @@
 # Projeto Gem Store - Shaping Up With Angular.Js 
-=================
 
 Desenvolvimento de um pequeno projeto em Angular.Js (versão 1.2.x) para aprofundar os conhecimentos básicos sobre o framework estudado através do curso Shaping Up With Angular.Js - Code School.
 O projeto tem como intenção listar joias já contidas no Json permitindo também que o usuário possa criar novas reviews das joias já listadas na página.
