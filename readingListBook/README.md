@@ -1,5 +1,4 @@
 Projeto - Reading List Book em Angular.Js
-=============
 
 Desenvolvimento de uma pequena aplicação em Angular.Js (versão 1.2.x). O projeto cria reviews de novos livros através do site Amazon.com (ao incluir um determinado número de ISBN através do site Amazon) e realiza a busca através do biding, podendo depois o usuário realizar a inclusão do livro na página.
 
