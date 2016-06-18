@@ -48,7 +48,7 @@ import { CONST, stringify } from "angular2/src/facade/lang";
  * expect(injector.get(Car).engine instanceof Engine).toBe(true);
  * ```
  */
-export let InjectMetadata = class InjectMetadata {
+export let InjectMetadata = class {
     constructor(token) {
         this.token = token;
     }
@@ -79,7 +79,7 @@ InjectMetadata = __decorate([
  * expect(injector.get(Car).engine).toBeNull();
  * ```
  */
-export let OptionalMetadata = class OptionalMetadata {
+export let OptionalMetadata = class {
     toString() { return `@Optional()`; }
 };
 OptionalMetadata = __decorate([
@@ -90,7 +90,7 @@ OptionalMetadata = __decorate([
  * `DependencyMetadata` is used by the framework to extend DI.
  * This is internal to Angular and should not be used directly.
  */
-export let DependencyMetadata = class DependencyMetadata {
+export let DependencyMetadata = class {
     get token() { return null; }
 };
 DependencyMetadata = __decorate([
@@ -128,7 +128,7 @@ DependencyMetadata = __decorate([
  * expect(() => injector.get(NeedsService)).toThrowError();
  * ```
  */
-export let InjectableMetadata = class InjectableMetadata {
+export let InjectableMetadata = class {
     constructor() {
     }
 };
@@ -163,7 +163,7 @@ InjectableMetadata = __decorate([
  * expect(() => child.get(NeedsDependency)).toThrowError();
  * ```
  */
-export let SelfMetadata = class SelfMetadata {
+export let SelfMetadata = class {
     toString() { return `@Self()`; }
 };
 SelfMetadata = __decorate([
@@ -195,7 +195,7 @@ SelfMetadata = __decorate([
  * expect(() => inj.get(NeedsDependency)).toThrowError();
  * ```
  */
-export let SkipSelfMetadata = class SkipSelfMetadata {
+export let SkipSelfMetadata = class {
     toString() { return `@SkipSelf()`; }
 };
 SkipSelfMetadata = __decorate([
@@ -256,7 +256,7 @@ SkipSelfMetadata = __decorate([
  * bootstrap(App);
  *```
  */
-export let HostMetadata = class HostMetadata {
+export let HostMetadata = class {
     toString() { return `@Host()`; }
 };
 HostMetadata = __decorate([

@@ -5,8 +5,8 @@ export declare class AsyncRouteHandler implements RouteHandler {
     private _loader;
     componentType: Type;
     data: RouteData;
-    constructor(_loader: () => Promise<Type>, data?: {
+    constructor(_loader: Function, data?: {
         [key: string]: any;
     });
-    resolveComponentType(): Promise<Type>;
+    resolveComponentType(): Promise<any>;
 }

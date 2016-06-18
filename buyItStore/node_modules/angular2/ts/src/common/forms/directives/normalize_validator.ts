@@ -1,18 +1,14 @@
-import {AbstractControl} from "../model";
-import {Validator, ValidatorFn, AsyncValidatorFn} from './validators';
+import {Validator} from './validators';
+import {Control} from "../model";
 
-export function normalizeValidator(validator: ValidatorFn | Validator): ValidatorFn {
-  if ((<Validator>validator).validate !== undefined) {
-    return (c: AbstractControl) => (<Validator>validator).validate(c);
-  } else {
-    return <ValidatorFn>validator;
-  }
-}
+export type ctrlFunc = ((c: Control) => {
+  [key: string]: any
+});
 
-export function normalizeAsyncValidator(validator: AsyncValidatorFn | Validator): AsyncValidatorFn {
+export function normalizeValidator(validator: (ctrlFunc | Validator)): ctrlFunc {
   if ((<Validator>validator).validate !== undefined) {
-    return (c: AbstractControl) => Promise.resolve((<Validator>validator).validate(c));
+    return (c: Control) => (<Validator>validator).validate(c);
   } else {
-    return <AsyncValidatorFn>validator;
+    return <ctrlFunc>validator;
   }
 }

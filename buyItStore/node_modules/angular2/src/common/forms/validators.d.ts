@@ -1,6 +1,5 @@
 import { OpaqueToken } from 'angular2/core';
 import * as modelModule from './model';
-import { ValidatorFn, AsyncValidatorFn } from './directives/validators';
 /**
  * Providers for validators to be used for {@link Control}s in a form.
  *
@@ -36,31 +35,31 @@ export declare class Validators {
     /**
      * Validator that requires controls to have a non-empty value.
      */
-    static required(control: modelModule.AbstractControl): {
+    static required(control: modelModule.Control): {
         [key: string]: boolean;
     };
     /**
      * Validator that requires controls to have a value of a minimum length.
      */
-    static minLength(minLength: number): ValidatorFn;
+    static minLength(minLength: number): Function;
     /**
      * Validator that requires controls to have a value of a maximum length.
      */
-    static maxLength(maxLength: number): ValidatorFn;
+    static maxLength(maxLength: number): Function;
     /**
      * Validator that requires a control to match a regex to its value.
      */
-    static pattern(pattern: string): ValidatorFn;
+    static pattern(pattern: string): Function;
     /**
      * No-op validator.
      */
-    static nullValidator(c: modelModule.AbstractControl): {
+    static nullValidator(c: any): {
         [key: string]: boolean;
     };
     /**
      * Compose multiple validators into a single function that returns the union
      * of the individual error maps.
      */
-    static compose(validators: ValidatorFn[]): ValidatorFn;
-    static composeAsync(validators: AsyncValidatorFn[]): AsyncValidatorFn;
+    static compose(validators: Function[]): Function;
+    static composeAsync(validators: Function[]): Function;
 }

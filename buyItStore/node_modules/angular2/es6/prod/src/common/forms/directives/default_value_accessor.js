@@ -20,7 +20,7 @@ const DEFAULT_VALUE_ACCESSOR = CONST_EXPR(new Provider(NG_VALUE_ACCESSOR, { useE
  *  <input type="text" ngControl="searchQuery">
  *  ```
  */
-export let DefaultValueAccessor = class DefaultValueAccessor {
+export let DefaultValueAccessor = class {
     constructor(_renderer, _elementRef) {
         this._renderer = _renderer;
         this._elementRef = _elementRef;

@@ -18,7 +18,7 @@ export interface RouteDefinition {
   regex?: string;
   serializer?: RegexSerializer;
   component?: Type | ComponentDefinition;
-  loader?: () => Promise<Type>;
+  loader?: Function;
   redirectTo?: any[];
   as?: string;
   name?: string;
@@ -34,6 +34,6 @@ export interface RouteDefinition {
  */
 export interface ComponentDefinition {
   type: string;
-  loader?: () => Promise<Type>;
+  loader?: Function;
   component?: Type;
 }

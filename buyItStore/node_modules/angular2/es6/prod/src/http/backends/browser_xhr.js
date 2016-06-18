@@ -13,7 +13,7 @@ import { Injectable } from 'angular2/core';
  *
  * Take care not to evaluate this in non-browser contexts.
  */
-export let BrowserXhr = class BrowserXhr {
+export let BrowserXhr = class {
     constructor() {
     }
     build() { return (new XMLHttpRequest()); }

@@ -18,7 +18,7 @@ import { CONST_EXPR } from 'angular2/src/facade/lang';
  * Wrapper class that exposes the Worker
  * and underlying {@link MessageBus} for lower level message passing.
  */
-export let WebWorkerInstance = class WebWorkerInstance {
+export let WebWorkerInstance = class {
     /** @internal */
     init(worker, bus) {
         this.worker = worker;

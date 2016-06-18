@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Injectable } from "angular2/src/core/di";
-export let RenderStore = class RenderStore {
+export let RenderStore = class {
     constructor() {
         this._nextIndex = 0;
         this._lookupById = new Map();

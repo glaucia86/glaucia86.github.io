@@ -23,7 +23,4 @@
  * they are all platform independent.
  */
 export class PlatformLocation {
-    /* abstract */ get pathname() { return null; }
-    /* abstract */ get search() { return null; }
-    /* abstract */ get hash() { return null; }
 }

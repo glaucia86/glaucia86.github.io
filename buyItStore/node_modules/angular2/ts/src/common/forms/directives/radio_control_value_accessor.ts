@@ -88,12 +88,9 @@ export class RadioButtonState {
 })
 export class RadioControlValueAccessor implements ControlValueAccessor,
     OnDestroy, OnInit {
-  /** @internal */
   _state: RadioButtonState;
-  /** @internal */
   _control: NgControl;
   @Input() name: string;
-  /** @internal */
   _fn: Function;
   onChange = () => {};
   onTouched = () => {};

@@ -23,19 +23,19 @@ export declare abstract class Renderer implements ParentRenderer {
     abstract createViewRoot(hostElement: any): any;
     abstract createTemplateAnchor(parentElement: any): any;
     abstract createText(parentElement: any, value: string): any;
-    abstract projectNodes(parentElement: any, nodes: any[]): void;
-    abstract attachViewAfter(node: any, viewRootNodes: any[]): void;
-    abstract detachView(viewRootNodes: any[]): void;
-    abstract destroyView(hostElement: any, viewAllNodes: any[]): void;
+    abstract projectNodes(parentElement: any, nodes: any[]): any;
+    abstract attachViewAfter(node: any, viewRootNodes: any[]): any;
+    abstract detachView(viewRootNodes: any[]): any;
+    abstract destroyView(hostElement: any, viewAllNodes: any[]): any;
     abstract listen(renderElement: any, name: string, callback: Function): Function;
     abstract listenGlobal(target: string, name: string, callback: Function): Function;
-    abstract setElementProperty(renderElement: any, propertyName: string, propertyValue: any): void;
-    abstract setElementAttribute(renderElement: any, attributeName: string, attributeValue: string): void;
+    abstract setElementProperty(renderElement: any, propertyName: string, propertyValue: any): any;
+    abstract setElementAttribute(renderElement: any, attributeName: string, attributeValue: string): any;
     /**
      * Used only in debug mode to serialize property changes to comment nodes,
      * such as <template> placeholders.
      */
-    abstract setBindingDebugInfo(renderElement: any, propertyName: string, propertyValue: string): void;
+    abstract setBindingDebugInfo(renderElement: any, propertyName: string, propertyValue: string): any;
     abstract setElementDebugInfo(renderElement: any, info: RenderDebugInfo): any;
     abstract setElementClass(renderElement: any, className: string, isAdd: boolean): any;
     abstract setElementStyle(renderElement: any, styleName: string, styleValue: string): any;

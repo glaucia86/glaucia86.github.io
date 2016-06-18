@@ -7,7 +7,7 @@ import { NumberValueAccessor } from './number_value_accessor';
 import { CheckboxControlValueAccessor } from './checkbox_value_accessor';
 import { SelectControlValueAccessor } from './select_control_value_accessor';
 import { RadioControlValueAccessor } from './radio_control_value_accessor';
-import { normalizeValidator, normalizeAsyncValidator } from './normalize_validator';
+import { normalizeValidator } from './normalize_validator';
 export function controlPath(name, parent) {
     var p = ListWrapper.clone(parent.path);
     p.push(name);
@@ -46,8 +46,7 @@ export function composeValidators(validators) {
     return isPresent(validators) ? Validators.compose(validators.map(normalizeValidator)) : null;
 }
 export function composeAsyncValidators(validators) {
-    return isPresent(validators) ? Validators.composeAsync(validators.map(normalizeAsyncValidator)) :
-        null;
+    return isPresent(validators) ? Validators.composeAsync(validators.map(normalizeValidator)) : null;
 }
 export function isPropertyUpdated(changes, viewModel) {
     if (!StringMapWrapper.contains(changes, "model"))

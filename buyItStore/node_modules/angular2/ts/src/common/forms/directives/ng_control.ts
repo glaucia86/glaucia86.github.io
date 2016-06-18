@@ -1,7 +1,6 @@
 import {ControlValueAccessor} from './control_value_accessor';
 import {AbstractControlDirective} from './abstract_control_directive';
 import {unimplemented} from 'angular2/src/facade/exceptions';
-import {AsyncValidatorFn, ValidatorFn} from './validators';
 
 /**
  * A base class that all control directive extend.
@@ -13,8 +12,8 @@ export abstract class NgControl extends AbstractControlDirective {
   name: string = null;
   valueAccessor: ControlValueAccessor = null;
 
-  get validator(): ValidatorFn { return <ValidatorFn>unimplemented(); }
-  get asyncValidator(): AsyncValidatorFn { return <AsyncValidatorFn>unimplemented(); }
+  get validator(): Function { return unimplemented(); }
+  get asyncValidator(): Function { return unimplemented(); }
 
   abstract viewToModelUpdate(newValue: any): void;
 }

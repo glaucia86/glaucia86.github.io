@@ -23,7 +23,6 @@ import {
   isPropertyUpdated,
   selectValueAccessor
 } from './shared';
-import {ValidatorFn, AsyncValidatorFn} from './validators';
 
 const formControlBinding =
     CONST_EXPR(new Provider(NgControl, {useExisting: forwardRef(() => NgFormControl)}));
@@ -111,9 +110,9 @@ export class NgFormControl extends NgControl implements OnChanges {
 
   get path(): string[] { return []; }
 
-  get validator(): ValidatorFn { return composeValidators(this._validators); }
+  get validator(): Function { return composeValidators(this._validators); }
 
-  get asyncValidator(): AsyncValidatorFn { return composeAsyncValidators(this._asyncValidators); }
+  get asyncValidator(): Function { return composeAsyncValidators(this._asyncValidators); }
 
   get control(): Control { return this.form; }
 

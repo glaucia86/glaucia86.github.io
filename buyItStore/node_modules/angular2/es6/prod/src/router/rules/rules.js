@@ -47,10 +47,9 @@ export class RedirectRule {
 // represents something like '/foo/:bar'
 export class RouteRule {
     // TODO: cache component instruction instances by params and by ParsedUrl instance
-    constructor(_routePath, handler, _routeName) {
+    constructor(_routePath, handler) {
         this._routePath = _routePath;
         this.handler = handler;
-        this._routeName = _routeName;
         this._cache = new Map();
         this.specificity = this._routePath.specificity;
         this.hash = this._routePath.hash;
@@ -85,7 +84,7 @@ export class RouteRule {
         if (this._cache.has(hashKey)) {
             return this._cache.get(hashKey);
         }
-        var instruction = new ComponentInstruction(urlPath, urlParams, this.handler.data, this.handler.componentType, this.terminal, this.specificity, params, this._routeName);
+        var instruction = new ComponentInstruction(urlPath, urlParams, this.handler.data, this.handler.componentType, this.terminal, this.specificity, params);
         this._cache.set(hashKey, instruction);
         return instruction;
     }

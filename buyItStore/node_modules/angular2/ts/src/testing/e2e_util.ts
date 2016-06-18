@@ -18,6 +18,6 @@ export function verifyNoBrowserErrors() {
       }
       return logEntry.level.value > webdriver.logging.Level.WARNING.value;
     });
-    expect(filteredLog).toEqual([]);
+    expect(filteredLog.length).toEqual(0);
   });
 }

@@ -27,8 +27,7 @@ import {
   selectValueAccessor
 } from './shared';
 import {Control} from '../model';
-import {NG_VALIDATORS, NG_ASYNC_VALIDATORS} from '../validators';
-import {ValidatorFn, AsyncValidatorFn} from './validators';
+import {Validators, NG_VALIDATORS, NG_ASYNC_VALIDATORS} from '../validators';
 
 
 const controlNameBinding =
@@ -137,9 +136,9 @@ export class NgControlName extends NgControl implements OnChanges,
 
   get formDirective(): any { return this._parent.formDirective; }
 
-  get validator(): ValidatorFn { return composeValidators(this._validators); }
+  get validator(): Function { return composeValidators(this._validators); }
 
-  get asyncValidator(): AsyncValidatorFn { return composeAsyncValidators(this._asyncValidators); }
+  get asyncValidator(): Function { return composeAsyncValidators(this._asyncValidators); }
 
   get control(): Control { return this.formDirective.getControl(this); }
 }

@@ -107,7 +107,7 @@ export class XHRConnection {
  * ```
  *
  **/
-export let XHRBackend = class XHRBackend {
+export let XHRBackend = class {
     constructor(_browserXHR, _baseResponseOptions) {
         this._browserXHR = _browserXHR;
         this._baseResponseOptions = _baseResponseOptions;

@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { CONST, CONST_EXPR } from 'angular2/src/facade/lang';
-export let RouteLifecycleHook = class RouteLifecycleHook {
+export let RouteLifecycleHook = class {
     constructor(name) {
         this.name = name;
     }
@@ -17,7 +17,7 @@ RouteLifecycleHook = __decorate([
     CONST(), 
     __metadata('design:paramtypes', [String])
 ], RouteLifecycleHook);
-export let CanActivate = class CanActivate {
+export let CanActivate = class {
     constructor(fn) {
         this.fn = fn;
     }

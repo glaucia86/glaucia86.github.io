@@ -3,7 +3,6 @@ import { ControlContainer } from './control_container';
 import { NgControl } from './ng_control';
 import { ControlValueAccessor } from './control_value_accessor';
 import { Control } from '../model';
-import { ValidatorFn, AsyncValidatorFn } from './validators';
 /**
  * Creates and binds a control with a specified name to a DOM element.
  *
@@ -74,7 +73,7 @@ export declare class NgControlName extends NgControl implements OnChanges, OnDes
     viewToModelUpdate(newValue: any): void;
     path: string[];
     formDirective: any;
-    validator: ValidatorFn;
-    asyncValidator: AsyncValidatorFn;
+    validator: Function;
+    asyncValidator: Function;
     control: Control;
 }

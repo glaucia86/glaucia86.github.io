@@ -19,7 +19,7 @@ const CHECKBOX_VALUE_ACCESSOR = CONST_EXPR(new Provider(NG_VALUE_ACCESSOR, { use
  *  <input type="checkbox" ngControl="rememberLogin">
  *  ```
  */
-export let CheckboxControlValueAccessor = class CheckboxControlValueAccessor {
+export let CheckboxControlValueAccessor = class {
     constructor(_renderer, _elementRef) {
         this._renderer = _renderer;
         this._elementRef = _elementRef;

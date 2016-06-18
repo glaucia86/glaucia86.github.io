@@ -238,13 +238,9 @@ export function Class(clsDef: ClassDefinition): ConcreteType {
 }
 
 var Reflect = global.Reflect;
-// Throw statement at top-level is disallowed by closure compiler in ES6 input.
-// Wrap in an IIFE as a work-around.
-(function checkReflect() {
-  if (!(Reflect && Reflect.getMetadata)) {
-    throw 'reflect-metadata shim is required when using class decorators';
-  }
-})();
+if (!(Reflect && Reflect.getMetadata)) {
+  throw 'reflect-metadata shim is required when using class decorators';
+}
 
 export function makeDecorator(
     annotationCls, chainFn: (fn: Function) => void = null): (...args: any[]) => (cls: any) => any {

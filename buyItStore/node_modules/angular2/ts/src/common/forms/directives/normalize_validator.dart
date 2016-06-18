@@ -10,11 +10,3 @@ Function normalizeValidator(dynamic validator){
   }
 }
 
-
-Function normalizeAsyncValidator(dynamic validator){
-  if (validator is Validator) {
-    return (c) => validator.validate(c);
-  } else {
-    return validator;
-  }
-}

@@ -94,7 +94,7 @@ function mergeOptions(defaultOpts, providedOpts, method, url) {
  * ```
  *
  **/
-export let Http = class Http {
+export let Http = class {
     constructor(_backend, _defaultOptions) {
         this._backend = _backend;
         this._defaultOptions = _defaultOptions;
@@ -159,7 +159,7 @@ Http = __decorate([
     Injectable(), 
     __metadata('design:paramtypes', [ConnectionBackend, RequestOptions])
 ], Http);
-export let Jsonp = class Jsonp extends Http {
+export let Jsonp = class extends Http {
     constructor(backend, defaultOptions) {
         super(backend, defaultOptions);
     }

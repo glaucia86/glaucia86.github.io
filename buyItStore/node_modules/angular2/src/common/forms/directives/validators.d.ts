@@ -1,4 +1,4 @@
-import { AbstractControl } from '../model';
+import { Control } from '../model';
 import * as modelModule from '../model';
 /**
  * An interface that can be implemented by classes that can act as validators.
@@ -18,7 +18,7 @@ import * as modelModule from '../model';
  * ```
  */
 export interface Validator {
-    validate(c: modelModule.AbstractControl): {
+    validate(c: modelModule.Control): {
         [key: string]: any;
     };
 }
@@ -34,14 +34,6 @@ export interface Validator {
  */
 export declare class RequiredValidator {
 }
-export interface ValidatorFn {
-    (c: AbstractControl): {
-        [key: string]: any;
-    };
-}
-export interface AsyncValidatorFn {
-    (c: AbstractControl): any;
-}
 /**
  * A directive which installs the {@link MinLengthValidator} for any `ngControl`,
  * `ngFormControl`, or control with `ngModel` that also has a `minlength` attribute.
@@ -49,7 +41,7 @@ export interface AsyncValidatorFn {
 export declare class MinLengthValidator implements Validator {
     private _validator;
     constructor(minLength: string);
-    validate(c: AbstractControl): {
+    validate(c: Control): {
         [key: string]: any;
     };
 }
@@ -60,14 +52,14 @@ export declare class MinLengthValidator implements Validator {
 export declare class MaxLengthValidator implements Validator {
     private _validator;
     constructor(maxLength: string);
-    validate(c: AbstractControl): {
+    validate(c: Control): {
         [key: string]: any;
     };
 }
 export declare class PatternValidator implements Validator {
     private _validator;
     constructor(pattern: string);
-    validate(c: AbstractControl): {
+    validate(c: Control): {
         [key: string]: any;
     };
 }

@@ -104,7 +104,7 @@ export class MockConnection {
  *
  * This method only exists in the mock implementation, not in real Backends.
  **/
-export let MockBackend = class MockBackend {
+export let MockBackend = class {
     constructor() {
         this.connectionsArray = [];
         this.connections = new Subject();

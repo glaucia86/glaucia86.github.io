@@ -36,5 +36,5 @@ export class RegexRoutePath implements RoutePath {
 
   generateUrl(params: {[key: string]: any}): GeneratedUrl { return this._serializer(params); }
 
-  toString(): string { return this._reString; }
+  toString() { return this._reString; }
 }

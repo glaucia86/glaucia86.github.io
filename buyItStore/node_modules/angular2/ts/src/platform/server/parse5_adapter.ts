@@ -159,7 +159,7 @@ export class Parse5DomAdapter extends DomAdapter {
     var evt = <Event>{
       type: eventType,
       defaultPrevented: false,
-      preventDefault: () => { (<any>evt).defaultPrevented = true; }
+      preventDefault: () => { evt.defaultPrevented = true; }
     };
     return evt;
   }

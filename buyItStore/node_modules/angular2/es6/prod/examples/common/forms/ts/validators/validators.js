@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component } from 'angular2/core';
 import { MinLengthValidator, MaxLengthValidator } from 'angular2/common';
 // #docregion min
-let MinLengthTestComponent = class MinLengthTestComponent {
+let MinLengthTestComponent = class {
 };
 MinLengthTestComponent = __decorate([
     Component({
@@ -26,7 +26,7 @@ MinLengthTestComponent = __decorate([
 ], MinLengthTestComponent);
 // #enddocregion
 // #docregion max
-let MaxLengthTestComponent = class MaxLengthTestComponent {
+let MaxLengthTestComponent = class {
 };
 MaxLengthTestComponent = __decorate([
     Component({

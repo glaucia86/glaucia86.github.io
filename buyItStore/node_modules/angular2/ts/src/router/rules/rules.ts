@@ -69,8 +69,7 @@ export class RouteRule implements AbstractRule {
 
   // TODO: cache component instruction instances by params and by ParsedUrl instance
 
-  constructor(private _routePath: RoutePath, public handler: RouteHandler,
-              private _routeName: string) {
+  constructor(private _routePath: RoutePath, public handler: RouteHandler) {
     this.specificity = this._routePath.specificity;
     this.hash = this._routePath.hash;
     this.terminal = this._routePath.terminal;
@@ -113,7 +112,7 @@ export class RouteRule implements AbstractRule {
     }
     var instruction =
         new ComponentInstruction(urlPath, urlParams, this.handler.data, this.handler.componentType,
-                                 this.terminal, this.specificity, params, this._routeName);
+                                 this.terminal, this.specificity, params);
     this._cache.set(hashKey, instruction);
 
     return instruction;
