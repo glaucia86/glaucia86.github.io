@@ -12,7 +12,7 @@ Desenvolvimento de uma pequena aplicação em Angular.Js (versão 1.2.x). O proj
 
 ## Demo do projeto
 
-- [Reading Book List App developed by Glaucia Lemos] (http://glaucia86.github.io/readingListBook/)
+- [Reading List Book App by Glaucia Lemos] (http://glaucia86.github.io/readingListBook/)
 
 ## Executar Localmente
 
