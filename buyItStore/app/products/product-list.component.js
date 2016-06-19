@@ -22,6 +22,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             ProductListComponent = (function () {
                 function ProductListComponent() {
                     this.pageTitle = 'Lista de Produtos';
+                    this.imageWidth = 50;
+                    this.imagemMargin = 2;
                     this.products = [
                         {
                             "productId": 1,
