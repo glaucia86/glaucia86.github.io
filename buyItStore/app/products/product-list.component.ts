@@ -1,6 +1,7 @@
 /* Arquivo Componente 'ts' - Lista de Produtos */
 
 import { Component } from 'angular2/core';
+import { IProduct } from './product';
 
 @Component ({
     selector: 'pm-products',
@@ -14,7 +15,7 @@ export class ProductListComponent {
     imageMargin: number = 15;
     showImage: boolean = false;
     listFilter: string = 'produto'; /* definimos aqui uma string de modelo */
-    products: any[] = [
+    products: IProduct[] = [
         {
             "productId": 1,
             "productName": "iPhone 5S 16GB Prata Tela 4 IOS 8 4G Câmera de 8MP",
