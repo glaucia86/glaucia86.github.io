@@ -24,6 +24,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     this.pageTitle = 'Lista de Produtos';
                     this.imageWidth = 50;
                     this.imageMargin = 2;
+                    this.showImage = false;
                     this.products = [
                         {
                             "productId": 1,
@@ -34,8 +35,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                             "price": 19.95,
                             "starRating": 3.2,
                             "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-                        },
-                        {
+                        }, {
                             "productId": 2,
                             "productName": "Garden Cart",
                             "productCode": "GDN-0023",
@@ -47,6 +47,10 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                         }
                     ];
                 }
+                /* Método para poder carregar a imagem ao clicar no botão */
+                ProductListComponent.prototype.toggleImage = function () {
+                    this.showImage = !this.showImage;
+                };
                 ProductListComponent = __decorate([
                     core_1.Component({
                         selector: 'pm-products',
