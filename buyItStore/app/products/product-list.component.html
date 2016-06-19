@@ -35,7 +35,7 @@
 					<th>Código</th>
 					<th>Disponível</th>
 					<th>Preço</th>
-					<th>Avaliação 5 Estrelas</th>
+					<th>Avaliação dos Clientes</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -50,7 +50,7 @@
                     <td>{{product.productName}}</td>
                     <td>{{product.productCode | lowercase}}</td>
                     <td>{{product.releaseDate}}</td>
-                    <td>{{product.price | currency:'BRS':true:'1.2-2'}}</td>
+                    <td>{{product.price | currency:'BRS'}}</td>
                     <td>{{product.starRating}}</td>
                 </tr>
 			</tbody>
