@@ -5,7 +5,8 @@ import { IProduct } from './product';
 
 @Component ({
     selector: 'pm-products',
-    templateUrl: 'app/products/product-list.component.html'
+    templateUrl: 'app/products/product-list.component.html',
+    styleUrls:['app/products/product-list.component.css']
 })
 
 /* Classe em .ts que corresponde aos atributos relacionados aos Produtos */
