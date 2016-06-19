@@ -1,6 +1,6 @@
 /* Arquivo Componente 'ts' - Lista de Produtos */
 
-import { Component } from 'angular2/core';
+import { Component, OnInit } from 'angular2/core';
 import { IProduct } from './product';
 
 @Component ({
@@ -10,7 +10,7 @@ import { IProduct } from './product';
 })
 
 /* Classe em .ts que corresponde aos atributos relacionados aos Produtos */
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
     pageTitle: string = 'Lista de Produtos';
     imageWidth: number = 150;
     imageMargin: number = 15;
@@ -41,5 +41,9 @@ export class ProductListComponent {
     /* Método para poder carregar a imagem ao clicar no botão */
     toggleImage() : void {
         this.showImage = !this.showImage;
+    }
+
+    ngOnInit() : void {
+        console.log('In OnInit');
     }
 }
