@@ -10,7 +10,7 @@ import { Component } from 'angular2/core';
 export class ProductListComponent {
     pageTitle: string = 'Lista de Produtos';
     imageWidth: number = 50;
-    imagemMargin: number = 2;
+    imageMargin: number = 2;
     products: any[] = [
         {
         "productId": 1,
