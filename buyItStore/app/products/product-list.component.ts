@@ -3,12 +3,14 @@
 import { Component, OnInit } from 'angular2/core';
 import { IProduct } from './product';
 import { ProductFilterPipe } from './product-filter.pipe'
+import { StarComponent } from '../shared/star.component';
 
 @Component ({
     selector: 'pm-products',
     templateUrl: 'app/products/product-list.component.html',
     styleUrls:['app/products/product-list.component.css'],
-    pipes: [ProductFilterPipe]
+    pipes: [ProductFilterPipe],
+    directives: [StarComponent]
 })
 
 /* Classe em .ts que corresponde aos atributos relacionados aos Produtos */
@@ -25,7 +27,7 @@ export class ProductListComponent implements OnInit {
             "productCode": "GDN-0011",
             "releaseDate": "19 de Março de 2016",
             "description": "Com um design fino e elegante, o iPhone 5S traz recursos avançados por um preço excelente, apresentando tela Retina de 4 polegadas, chip A7 com arquitetura de 64 bits, sensor de impressão digital Touch ID, câmera iSight de 8MP, câmera FaceTime HD, 4G LTE e Wi-Fi*, iOS 8 e iCloud.",
-            "price": 1.899,
+            "price": 1899.99,
             "starRating": 5,
             "imageUrl": "https://static.wmobjects.com.br/hotsite/sku-content/apple/418764/images/418764-apple-iphone-5s-16gb-prata-espacial-desbloqueado-ios7-product-image01.png"
         },{
@@ -34,7 +36,7 @@ export class ProductListComponent implements OnInit {
             "productCode": "GDN-0023",
             "releaseDate": "19 de Junho de 2016",
             "description": "O Samsung Galaxy Tab A P550 oferece uma experiência tecnológica incrível e altamente funcional. Com sistema operacional Android 5.0, possui tela de 9.7 polegadas para a exibição de diversos conteúdos e também conta com processador Quad Core 1.2GHz para uma navegação mais rápida e fluida.",
-            "price": 1.500,
+            "price": 1499.99,
             "starRating": 4.2,
             "imageUrl": "http://isuba1-a.akamaihd.net/produtos/01/00/item/122899/1/122899106_1GG.png"
         }   
@@ -47,5 +49,9 @@ export class ProductListComponent implements OnInit {
 
     ngOnInit() : void {
         console.log('In OnInit');
+    }
+
+    onRatingClicked(message: string) : void {
+        this.pageTitle = 'Lista de Produtos: ' + message;
     }
 }

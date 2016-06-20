@@ -50,8 +50,11 @@
                     <td>{{product.productName}}</td>
                     <td>{{product.productCode | lowercase}}</td>
                     <td>{{product.releaseDate}}</td>
-                    <td>{{product.price | currency:'BRS'}}</td>
-                    <td>{{product.starRating}}</td>
+                    <td>{{product.price | currency:'BRS':true:'1.2-2'}}</td>
+                    <td>
+						<bi-star [rating]='product.starRating'
+							(ratingClicked)='onRatingClicked($event)'></bi-star>
+					</td>
                 </tr>
 			</tbody>
 		</table>

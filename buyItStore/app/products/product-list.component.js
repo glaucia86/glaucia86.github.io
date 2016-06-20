@@ -1,5 +1,5 @@
 /* Arquivo Componente 'ts' - Lista de Produtos */
-System.register(['angular2/core', './product-filter.pipe'], function(exports_1, context_1) {
+System.register(['angular2/core', './product-filter.pipe', '../shared/star.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,7 +11,7 @@ System.register(['angular2/core', './product-filter.pipe'], function(exports_1, 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, product_filter_pipe_1;
+    var core_1, product_filter_pipe_1, star_component_1;
     var ProductListComponent;
     return {
         setters:[
@@ -20,6 +20,9 @@ System.register(['angular2/core', './product-filter.pipe'], function(exports_1, 
             },
             function (product_filter_pipe_1_1) {
                 product_filter_pipe_1 = product_filter_pipe_1_1;
+            },
+            function (star_component_1_1) {
+                star_component_1 = star_component_1_1;
             }],
         execute: function() {
             ProductListComponent = (function () {
@@ -36,7 +39,7 @@ System.register(['angular2/core', './product-filter.pipe'], function(exports_1, 
                             "productCode": "GDN-0011",
                             "releaseDate": "19 de Março de 2016",
                             "description": "Com um design fino e elegante, o iPhone 5S traz recursos avançados por um preço excelente, apresentando tela Retina de 4 polegadas, chip A7 com arquitetura de 64 bits, sensor de impressão digital Touch ID, câmera iSight de 8MP, câmera FaceTime HD, 4G LTE e Wi-Fi*, iOS 8 e iCloud.",
-                            "price": 1.899,
+                            "price": 1899.99,
                             "starRating": 5,
                             "imageUrl": "https://static.wmobjects.com.br/hotsite/sku-content/apple/418764/images/418764-apple-iphone-5s-16gb-prata-espacial-desbloqueado-ios7-product-image01.png"
                         }, {
@@ -45,7 +48,7 @@ System.register(['angular2/core', './product-filter.pipe'], function(exports_1, 
                             "productCode": "GDN-0023",
                             "releaseDate": "19 de Junho de 2016",
                             "description": "O Samsung Galaxy Tab A P550 oferece uma experiência tecnológica incrível e altamente funcional. Com sistema operacional Android 5.0, possui tela de 9.7 polegadas para a exibição de diversos conteúdos e também conta com processador Quad Core 1.2GHz para uma navegação mais rápida e fluida.",
-                            "price": 1.500,
+                            "price": 1499.99,
                             "starRating": 4.2,
                             "imageUrl": "http://isuba1-a.akamaihd.net/produtos/01/00/item/122899/1/122899106_1GG.png"
                         }
@@ -58,12 +61,16 @@ System.register(['angular2/core', './product-filter.pipe'], function(exports_1, 
                 ProductListComponent.prototype.ngOnInit = function () {
                     console.log('In OnInit');
                 };
+                ProductListComponent.prototype.onRatingClicked = function (message) {
+                    this.pageTitle = 'Lista de Produtos: ' + message;
+                };
                 ProductListComponent = __decorate([
                     core_1.Component({
                         selector: 'pm-products',
                         templateUrl: 'app/products/product-list.component.html',
                         styleUrls: ['app/products/product-list.component.css'],
-                        pipes: [product_filter_pipe_1.ProductFilterPipe]
+                        pipes: [product_filter_pipe_1.ProductFilterPipe],
+                        directives: [star_component_1.StarComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], ProductListComponent);
