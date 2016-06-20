@@ -1,6 +1,6 @@
 [
     {
-        "productId": 1,
+        "productId": 3,
         "productName": "Leaf Rake",
         "productCode": "GDN-0011",
         "releaseDate": "March 19, 2016",
@@ -10,7 +10,7 @@
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
     },
     {
-        "productId": 2,
+        "productId": 4,
         "productName": "Garden Cart",
         "productCode": "GDN-0023",
         "releaseDate": "March 18, 2016",
@@ -30,7 +30,7 @@
         "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
     },
     {
-        "productId": 8,
+        "productId": 6,
         "productName": "Saw",
         "productCode": "TBX-0022",
         "releaseDate": "May 15, 2016",

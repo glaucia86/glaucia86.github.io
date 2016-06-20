@@ -1,0 +1,77 @@
+/* Arquivo Componente responsável pelos dados dos Produtos */
+import { Injectable } from 'angular2/core';
+import { IProduct } from './product';
+
+@Injectable()
+
+export class ProductService {
+    /* Método para poder retornar os produtos */
+    getProducts(): IProduct[] {
+        return [
+            {
+                "productId": 1,
+                "productName": "iPhone 5S 16GB Prata Tela 4 IOS 8 4G Câmera de 8MP",
+                "productCode": "GDN-0011",
+                "releaseDate": "19 de Março de 2016",
+                "description": "Com um design fino e elegante, o iPhone 5S traz recursos avançados por um preço excelente, apresentando tela Retina de 4 polegadas, chip A7 com arquitetura de 64 bits, sensor de impressão digital Touch ID, câmera iSight de 8MP, câmera FaceTime HD, 4G LTE e Wi-Fi*, iOS 8 e iCloud.",
+                "price": 1899.99,
+                "starRating": 5,
+                "imageUrl": "https://static.wmobjects.com.br/hotsite/sku-content/apple/418764/images/418764-apple-iphone-5s-16gb-prata-espacial-desbloqueado-ios7-product-image01.png"
+            },{
+                "productId": 2,
+                "productName": "Samsung Galaxy Tab A P550",
+                "productCode": "GDN-0023",
+                "releaseDate": "19 de Junho de 2016",
+                "description": "O Samsung Galaxy Tab A P550 oferece uma experiência tecnológica incrível e altamente funcional. Com sistema operacional Android 5.0, possui tela de 9.7 polegadas para a exibição de diversos conteúdos e também conta com processador Quad Core 1.2GHz para uma navegação mais rápida e fluida.",
+                "price": 1499.99,
+                "starRating": 4.2,
+                "imageUrl": "http://isuba1-a.akamaihd.net/produtos/01/00/item/122899/1/122899106_1GG.png"
+            }, {
+                "productId": 3,
+                "productName": "Impressora Hp Deskjet 1000",
+                "productCode": "GDN-0011",
+                "releaseDate": "20 de Janeiro de 2016",
+                "description": "Imprima E Compartilhe Documentos Do Dia-A-Dia Com Esta Confiável Impressora Hp. Projetada Para Atender As Suas Necessidades, É Fácil De Usar E Ainda Proporciona Economia De Recursos. É A Hp Disponibilizando Produtos De Altíssima Qualidade E Tecnologia.",
+                "price": 223.90,
+                "starRating": 3.2,
+                "imageUrl": "https://static.wmobjects.com.br/hotsite/sku-content/hp/259920/images/259920-Impressora-HP-1000-Deskjet-section1.png"
+            },{
+                "productId": 4,
+                "productName": "Smart TV LED 65' Samsung",
+                "productCode": "GDN-0023",
+                "releaseDate": "20 de Junho de 2016",
+                "description": "A tela curva estimula um campo maior de visão o que faz com que você tenha a sensação de que a tela é a maior ainda. É uma experiência de visão panorâmica que traz maior conforto visual e permite enxergar detalhes nítidos em todos os cantos da tela.",
+                "price": 7.999,
+                "starRating": 5,
+                "imageUrl": "http://isuba1-a.akamaihd.net/produtos/01/00/item/122702/6/122702684_1GG.png"
+            },{
+                "productId": 5,
+                "productName": "Notebook Acer E5-571-51AF Intel Core i5 4GB 1TB Tela LED 15.6' Windows 8.1 - Vermelho",
+                "productCode": "TBX-0048",
+                "releaseDate": "May 21, 2016",
+                "description": "Fino e com maior desempenho, a nova linha de notebooks Acer Aspire E5 é um parceiro ideal para ir a qualquer lugar e trabalhar a qualquer hora. Com incrível Processador Intel Core i5 você transforma sua experiência com tecnologia de ponta que oferece velocidade, desempenho, acessos mais versáteis e novos recursos inéditos.",
+                "price": 3999.90,
+                "starRating": 4.5,
+                "imageUrl": "http://static.acer.com/up/Resource/Acer/Laptops/Aspire_E5/Images/20140424/As_E-531_E5-571_Red_nontouch_glare_zoom.png"
+            },{
+                "productId": 6,
+                "productName": "Console Xbox One 1TB",
+                "productCode": "TBX-0022",
+                "releaseDate": "17 de Março de 2016",
+                "description": "Divirta-se e ganhe recompensas ao usar o Xbox One com o Xbox Live! Desbloqueie ainda mais jogos e vantagens com uma associação Xbox Live Gold. Com o Xbox Live Gold, você tem uma lista maior de jogos gratuitos disponíveis no Xbox Live para jogar sempre que quiser. Que jogador não adoraria isso? Algumas das outras vantagens incríveis são: busca mais inteligente e mais rápida de adversários (online), para assegurar desafios constantes, e modo multijogador online para todos na sua casa participarem!",
+                "price": 1999.90,
+                "starRating": 4.8,
+                "imageUrl": "https://images4.tcdn.com.br/img/editor/up/466588/2893371xboxone_leconsolecontroller_forzamotorsport6_c_rgb.png"
+            },{
+                "productId": 10,
+                "productName": "iPad Air 2 128GB Wi-Fi Tela Retina 9.7' Câmera 8MP Dourado",
+                "productCode": "GMG-0042",
+                "releaseDate": "15 de Outubro de 2015",
+                "description": "O iPad Air 2 é tão fino e leve que você quase esquece que está segurando! A tela retina combina as três camadas em uma só que, além de deixar a tela mais fina, conta com cores vivas e maior contraste. Possui tecnologia Touch ID que oferece segurança, pois a senha é perfeita e difícil de copiar.A câmera iSight conta com recursos ópticos avançados e recursos novos como Panorama, vídeo em time-lapse, câmera lenta e os modos contínuo e timer. A rede Wi-Fi do iPad Air 2 é até duas vezes mais rápida que a do modelo anterior. Além disso, vem com apps incríveis para checar e-mails, editar filmes, editar fotos e ler livros.",
+                "price": 3999.00,
+                "starRating": 5,
+                "imageUrl": "http://www.eppoustore.com.br/imagem/index/6558032/G/ipad_mini_3___dourado.png"
+            }
+        ];
+    }
+}
