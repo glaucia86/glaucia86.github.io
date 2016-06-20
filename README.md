@@ -12,3 +12,7 @@ O projeto lista joias já listadas no Json e onde poderá criar novas reviews da
 - [Reading List Book App developed by Glaucia Lemos] (http://glaucia86.github.io/readingListBook/)
 
 Mais um projeto desenvolvido em Angular.Js (versão 1.2.x). O projeto cria reviews de novos livros através do site Amazon.com (ao incluir o número ISBN de um determinado livro através do site Amazon) e realiza a busca através do biding, podendo depois o usuário poder realizar a inclusão do livro na página. 
+
+- [Buy it! Store developed by Glaucia Lemos] (http://glaucia86.github.io/buyItStore/)
+
+(em desenvolvimento.....) :)
