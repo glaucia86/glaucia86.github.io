@@ -41,7 +41,9 @@ System.register(['angular2/core', './product-filter.pipe', '../shared/star.compo
                     this.showImage = !this.showImage;
                 };
                 ProductListComponent.prototype.ngOnInit = function () {
-                    this.products = this._productService.getProducts();
+                    var _this = this;
+                    this._productService.getProducts()
+                        .subscribe(function (products) { return _this.products = products; }, function (error) { return _this.errorMessage = error; });
                 };
                 ProductListComponent.prototype.onRatingClicked = function (message) {
                     this.pageTitle = 'Lista de Produtos: ' + message;
