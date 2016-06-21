@@ -20,7 +20,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             WelcomeComponent = (function () {
                 function WelcomeComponent() {
-                    this.pageTitle = "Welcome";
+                    this.pageTitle = "Seja Bem-Vindo";
                 }
                 WelcomeComponent = __decorate([
                     core_1.Component({
