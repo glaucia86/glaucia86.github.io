@@ -1,13 +1,12 @@
-/* Aqui estamos criando um arquivo Interface - Produto */
-/* Tudo que seja relacionado ao Produto colocaremos aqui */
-
+/* Defines the product entity */
 export interface IProduct {
     productId: number;
     productName: string;
     productCode: string;
     releaseDate: string;
-    description: string;
     price: number;
+    description: string;
     starRating: number;
-    imageUrl: string;    
+    imageUrl: string;
 }
+

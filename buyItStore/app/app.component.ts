@@ -1,7 +1,7 @@
-import { Component } from 'angular2/core';
-import { HTTP_PROVIDERS } from 'angular2/http';
+import { Component } from '@angular/core';
+import { HTTP_PROVIDERS } from '@angular/http';
 import 'rxjs/Rx'; /* Para poder carregar todos os features */
-import { ROUTER_PROVIDERS, RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
+import { ROUTER_PROVIDERS, Routes, ROUTER_DIRECTIVES } from '@angular/router';
 
 
 import { ProductListComponent } from './products/product-list.component';
@@ -17,8 +17,8 @@ import { ProductDetailComponent } from './products/product-detail.component';
             <div class='container-fluid'>
                 <a class='navbar-brand'>{{pageTitle}}</a>
                 <ul class='nav navbar-nav'>
-                    <li><a [routerLink]="['Welcome']">Página Inicial</a></li>
-                    <li><a [routerLink]="['Products']">Lista de Produtos</a></li>
+                    <li><a [routerLink]="['/welcome']">Página Inicial</a></li>
+                    <li><a [routerLink]="['/products']">Lista de Produtos</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,13 +33,14 @@ import { ProductDetailComponent } from './products/product-detail.component';
                 ROUTER_PROVIDERS]
 })
 
-/* Aqui no Componente 'RouteConfig' definimos as rotas das páginas */
-@RouteConfig([
+/* Aqui no Componente 'Routes' definimos as rotas das páginas */
+@Routes([
     /* Aqui estamos definindo as rotas das páginas: 'Bem-Vindo' e 'Lista de Produtos'. 
         Porém estamos definindo aqui a página 'Bem-Vindo' como default. */
-    { path: '/welcome', name: 'Welcome', component: WelcomeComponent, useAsDefault: true },
-    { path: '/products', name: 'Products', component: ProductListComponent },
-    { path: '/product/:id', name: 'ProductDetail', component: ProductDetailComponent }
+    { path: '', component: WelcomeComponent },
+    { path: '/welcome', component: WelcomeComponent },
+    { path: '/products', component: ProductListComponent },
+    { path: '/product/:id', component: ProductDetailComponent }
 ])
 
 export class AppComponent {

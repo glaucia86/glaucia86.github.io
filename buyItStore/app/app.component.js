@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/http', 'rxjs/Rx', 'angular2/router', './products/product-list.component', './products/product.service', './home/welcome.component', './products/product-detail.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/http', 'rxjs/Rx', '@angular/router', './products/product-list.component', './products/product.service', './home/welcome.component', './products/product-detail.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -44,18 +44,19 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Rx', 'angular2/router',
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'pm-app',
-                        template: "\n    <div>\n        <nav class='navbar navbar-default'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'>{{pageTitle}}</a>\n                <ul class='nav navbar-nav'>\n                    <li><a [routerLink]=\"['Welcome']\">P\u00E1gina Inicial</a></li>\n                    <li><a [routerLink]=\"['Products']\">Lista de Produtos</a></li>\n                </ul>\n            </div>\n        </nav>\n        <div class=\"container\">\n            <router-outlet></router-outlet>\n        </div>\n     </div>\n    ",
+                        template: "\n    <div>\n        <nav class='navbar navbar-default'>\n            <div class='container-fluid'>\n                <a class='navbar-brand'>{{pageTitle}}</a>\n                <ul class='nav navbar-nav'>\n                    <li><a [routerLink]=\"['/welcome']\">P\u00E1gina Inicial</a></li>\n                    <li><a [routerLink]=\"['/products']\">Lista de Produtos</a></li>\n                </ul>\n            </div>\n        </nav>\n        <div class=\"container\">\n            <router-outlet></router-outlet>\n        </div>\n     </div>\n    ",
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [product_service_1.ProductService,
                             http_1.HTTP_PROVIDERS,
                             router_1.ROUTER_PROVIDERS]
                     }),
-                    router_1.RouteConfig([
+                    router_1.Routes([
                         /* Aqui estamos definindo as rotas das páginas: 'Bem-Vindo' e 'Lista de Produtos'.
                             Porém estamos definindo aqui a página 'Bem-Vindo' como default. */
-                        { path: '/welcome', name: 'Welcome', component: welcome_component_1.WelcomeComponent, useAsDefault: true },
-                        { path: '/products', name: 'Products', component: product_list_component_1.ProductListComponent },
-                        { path: '/product/:id', name: 'ProductDetail', component: product_detail_component_1.ProductDetailComponent }
+                        { path: '', component: welcome_component_1.WelcomeComponent },
+                        { path: '/welcome', component: welcome_component_1.WelcomeComponent },
+                        { path: '/products', component: product_list_component_1.ProductListComponent },
+                        { path: '/product/:id', component: product_detail_component_1.ProductDetailComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

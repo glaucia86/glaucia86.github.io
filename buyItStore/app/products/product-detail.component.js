@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './product.service', '../shared/star.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/router', './product.service', '../shared/star.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -28,18 +28,14 @@ System.register(['angular2/core', 'angular2/router', './product.service', '../sh
             }],
         execute: function() {
             ProductDetailComponent = (function () {
-                function ProductDetailComponent(_productService, _routeParams, _router) {
+                function ProductDetailComponent(_productService, _router) {
                     this._productService = _productService;
-                    this._routeParams = _routeParams;
                     this._router = _router;
-                    this.pageTitle = 'Detalhes do Produto';
+                    this.pageTitle = 'Product Detail';
                 }
-                ProductDetailComponent.prototype.ngOnInit = function () {
-                    if (!this.product) {
-                        var id = +this._routeParams.get('id');
-                        this.pageTitle += ": " + id;
-                        this.getProduct(id);
-                    }
+                ProductDetailComponent.prototype.routerOnActivate = function (curr) {
+                    var id = +curr.getParam('id');
+                    this.getProduct(id);
                 };
                 ProductDetailComponent.prototype.getProduct = function (id) {
                     var _this = this;
@@ -47,14 +43,14 @@ System.register(['angular2/core', 'angular2/router', './product.service', '../sh
                         .subscribe(function (product) { return _this.product = product; }, function (error) { return _this.errorMessage = error; });
                 };
                 ProductDetailComponent.prototype.onBack = function () {
-                    this._router.navigate(['Products']);
+                    this._router.navigate(['/products']);
                 };
                 ProductDetailComponent = __decorate([
                     core_1.Component({
                         templateUrl: 'app/products/product-detail.component.html',
                         directives: [star_component_1.StarComponent]
                     }), 
-                    __metadata('design:paramtypes', [product_service_1.ProductService, router_1.RouteParams, router_1.Router])
+                    __metadata('design:paramtypes', [product_service_1.ProductService, router_1.Router])
                 ], ProductDetailComponent);
                 return ProductDetailComponent;
             }());

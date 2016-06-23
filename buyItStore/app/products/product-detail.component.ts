@@ -1,5 +1,5 @@
-import { Component, OnInit } from 'angular2/core';
-import { RouteParams, Router } from 'angular2/router';
+import { Component } from '@angular/core';
+import { Router, OnActivate, RouteSegment } from '@angular/router';
 
 import { IProduct } from './product';
 import { ProductService } from './product.service';
@@ -9,24 +9,18 @@ import { StarComponent } from '../shared/star.component';
     templateUrl: 'app/products/product-detail.component.html',
     directives: [StarComponent]
 })
-
-export class ProductDetailComponent implements OnInit {
-    pageTitle: string = 'Detalhes do Produto';
+export class ProductDetailComponent implements OnActivate {
+    pageTitle: string = 'Product Detail';
     product: IProduct;
     errorMessage: string;
 
     constructor(private _productService: ProductService,
-                private _routeParams: RouteParams,
                 private _router: Router) {
+    }
 
-                }
-
-    ngOnInit() {
-        if(!this.product) {
-            let id = +this._routeParams.get('id');
-            this.pageTitle += `: ${id}`;  
-            this.getProduct(id);
-        } 
+    routerOnActivate(curr: RouteSegment): void {
+        let id = +curr.getParam('id');
+        this.getProduct(id);
     }
 
     getProduct(id: number) {
@@ -37,6 +31,7 @@ export class ProductDetailComponent implements OnInit {
     }
 
     onBack(): void {
-        this._router.navigate(['Products']);
+        this._router.navigate(['/products']);
     }
+
 }

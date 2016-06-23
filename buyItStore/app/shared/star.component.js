@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['@angular/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -22,29 +22,25 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 function StarComponent() {
                     this.ratingClicked = new core_1.EventEmitter();
                 }
-                /* Método que realiza o cálculo das estrelas */
-                /* Usamos o 'OnChanges' porque queremos que a altura e a
-                largura da estrela apareça todas as vezes que definimos a classificação de um
-                produto.  Por isso, usamos o 'OnChanges' */
                 StarComponent.prototype.ngOnChanges = function () {
+                    // Convert x out of 5 starts
+                    // to y out of 86px width
                     this.starWidth = this.rating * 86 / 5;
                 };
-                /* Método responsável para poder realizar o evento do click para
-                a avaliação dos produtos - estrelas */
                 StarComponent.prototype.onClick = function () {
-                    this.ratingClicked.emit("A avalia\u00E7\u00E3o " + this.rating + " foi clicada!");
+                    this.ratingClicked.emit("The rating " + this.rating + " was clicked!");
                 };
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Number)
                 ], StarComponent.prototype, "rating", void 0);
                 __decorate([
-                    core_1.Output, 
+                    core_1.Output(), 
                     __metadata('design:type', core_1.EventEmitter)
                 ], StarComponent.prototype, "ratingClicked", void 0);
                 StarComponent = __decorate([
                     core_1.Component({
-                        selector: 'bi-star',
+                        selector: 'ai-star',
                         templateUrl: 'app/shared/star.component.html',
                         styleUrls: ['app/shared/star.component.css']
                     }), 

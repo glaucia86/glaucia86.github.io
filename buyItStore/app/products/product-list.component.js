@@ -1,5 +1,4 @@
-/* Arquivo Componente 'ts' - Lista de Produtos */
-System.register(['angular2/core', 'angular2/router', './product-filter.pipe', '../shared/star.component', './product.service'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/router', './product-filter.pipe', '../shared/star.component', './product.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -34,12 +33,12 @@ System.register(['angular2/core', 'angular2/router', './product-filter.pipe', '.
             ProductListComponent = (function () {
                 function ProductListComponent(_productService) {
                     this._productService = _productService;
-                    this.pageTitle = 'Lista de Produtos';
-                    this.imageWidth = 150;
-                    this.imageMargin = 15;
+                    this.pageTitle = 'Product List';
+                    this.imageWidth = 50;
+                    this.imageMargin = 2;
                     this.showImage = false;
+                    this.listFilter = '';
                 }
-                /* Método para poder carregar a imagem ao clicar no botão */
                 ProductListComponent.prototype.toggleImage = function () {
                     this.showImage = !this.showImage;
                 };
@@ -49,7 +48,7 @@ System.register(['angular2/core', 'angular2/router', './product-filter.pipe', '.
                         .subscribe(function (products) { return _this.products = products; }, function (error) { return _this.errorMessage = error; });
                 };
                 ProductListComponent.prototype.onRatingClicked = function (message) {
-                    this.pageTitle = 'Lista de Produtos: ' + message;
+                    this.pageTitle = 'Product List: ' + message;
                 };
                 ProductListComponent = __decorate([
                     core_1.Component({

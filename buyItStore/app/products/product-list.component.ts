@@ -1,46 +1,43 @@
-/* Arquivo Componente 'ts' - Lista de Produtos */
-
-import { Component, OnInit } from 'angular2/core';
-import { ROUTER_DIRECTIVES } from 'angular2/router';
+import { Component, OnInit }  from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { IProduct } from './product';
-import { ProductFilterPipe } from './product-filter.pipe'
+import { ProductFilterPipe } from './product-filter.pipe';
 import { StarComponent } from '../shared/star.component';
 import { ProductService } from './product.service';
 
-@Component ({
+@Component({
     templateUrl: 'app/products/product-list.component.html',
-    styleUrls:['app/products/product-list.component.css'],
+    styleUrls: ['app/products/product-list.component.css'],
     pipes: [ProductFilterPipe],
     directives: [StarComponent, ROUTER_DIRECTIVES]
 })
-
-/* Classe em .ts que corresponde aos atributos relacionados aos Produtos */
 export class ProductListComponent implements OnInit {
-    pageTitle: string = 'Lista de Produtos';
-    imageWidth: number = 150;
-    imageMargin: number = 15;
+    pageTitle: string = 'Product List';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
     showImage: boolean = false;
-    listFilter: string;
-    products: IProduct[];
+    listFilter: string = '';
     errorMessage: string;
+    products: IProduct[];
+
 
     constructor(private _productService: ProductService) {
 
     }
 
-    /* Método para poder carregar a imagem ao clicar no botão */
-    toggleImage() : void {
+    toggleImage(): void {
         this.showImage = !this.showImage;
     }
 
-    ngOnInit() : void {
-        this._productService.getProducts()
-            .subscribe(products => this.products = products,
-            error => this.errorMessage = <any>error)
+    ngOnInit(): void {
+           this._productService.getProducts()
+                     .subscribe(
+                       products => this.products = products,
+                       error =>  this.errorMessage = <any>error);
     }
 
-    onRatingClicked(message: string) : void {
-        this.pageTitle = 'Lista de Produtos: ' + message;
+    onRatingClicked(message: string): void {
+        this.pageTitle = 'Product List: ' + message;
     }
 }
