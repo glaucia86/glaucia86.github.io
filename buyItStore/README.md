@@ -2,7 +2,7 @@
  
  Desenvolvimento de mais uma aplicação em Angular.Js, porém dessa vez com a versão 2 e mais com o TypeScript. O projeto tem como intenção criar um gerenciamento de produtos listados (já pré-definidos no products.json). O usuário pode listar um determinado produto usando um filtro e detalhar as especificações sobre o produto. O design do projeto foi realizado no conceito SPA (Single Page Application).
  
- ## Recursos utilizados no desenvolvimento:
+ ##Recursos utilizados no desenvolvimento:
  
  - Angular.Js 2 (versão RC1);
  - TypeScript;
