@@ -10,7 +10,7 @@ import { StarComponent } from '../shared/star.component';
     directives: [StarComponent]
 })
 export class ProductDetailComponent implements OnActivate {
-    pageTitle: string = 'Product Detail';
+    pageTitle: string = 'Detalhes do Produto';
     product: IProduct;
     errorMessage: string;
 

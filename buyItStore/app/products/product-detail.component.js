@@ -31,7 +31,7 @@ System.register(['@angular/core', '@angular/router', './product.service', '../sh
                 function ProductDetailComponent(_productService, _router) {
                     this._productService = _productService;
                     this._router = _router;
-                    this.pageTitle = 'Product Detail';
+                    this.pageTitle = 'Detalhes do Produto';
                 }
                 ProductDetailComponent.prototype.routerOnActivate = function (curr) {
                     var id = +curr.getParam('id');

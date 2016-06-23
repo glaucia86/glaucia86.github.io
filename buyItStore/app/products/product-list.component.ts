@@ -13,7 +13,7 @@ import { ProductService } from './product.service';
     directives: [StarComponent, ROUTER_DIRECTIVES]
 })
 export class ProductListComponent implements OnInit {
-    pageTitle: string = 'Product List';
+    pageTitle: string = 'Lista de Produtos';
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;

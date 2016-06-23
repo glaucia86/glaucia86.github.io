@@ -33,7 +33,7 @@ System.register(['@angular/core', '@angular/router', './product-filter.pipe', '.
             ProductListComponent = (function () {
                 function ProductListComponent(_productService) {
                     this._productService = _productService;
-                    this.pageTitle = 'Product List';
+                    this.pageTitle = 'Lista de Produtos';
                     this.imageWidth = 50;
                     this.imageMargin = 2;
                     this.showImage = false;
