@@ -42,7 +42,7 @@ Durante o desenvolvimento desse projeto pude aprender as novas features do Angul
  
 ## Demo do projeto
  
-- [Buy it! Store by Glaucia Lemos] (http://glaucia86.github.io/buyItStore/)
+- (A ser realizado o deploy ainda....!)
  
 ## Executar Localmente
  
