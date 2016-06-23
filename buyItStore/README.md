@@ -4,85 +4,85 @@
  
  ##Recursos utilizados no desenvolvimento:
  
- - Angular.Js 2 (versão RC1);
- - TypeScript;
- - ES6 (nova versão do JavaScript);
- - JSon;
- - Framework Bootstrap 3;
- - Conceito de SPA (Single Page Application);
+- Angular.Js 2 (versão RC1);
+- TypeScript;
+- ES6 (nova versão do JavaScript);
+- JSon;
+- Framework Bootstrap 3;
+- Conceito de SPA (Single Page Application);
  
- ##Conceitos aprendidos durante o desenvolvimento do Projeto:
+##Conceitos aprendidos durante o desenvolvimento do Projeto:
  
- Durante o desenvolvimento desse projeto pude aprender as novas features do Angular 2 + TypeScript, juntamente com os novos e alguns conceitos do ES6. Entre esses:
+Durante o desenvolvimento desse projeto pude aprender as novas features do Angular 2 + TypeScript, juntamente com os novos e alguns conceitos do ES6. Entre esses:
  
- - Building a Template;
- - Using a Component as a Directive;
- - Biding with Interpolation;
- - Adding Logic with Directives;
- - Property Biding;
- - Handling Events with Event Biding;
- - Handling Input with Two-way Biding;
- - Transforming Data with Pipes;
- - Defining an Interface;
- - Encapsulating Component Styles;
- - Using Lifecycle Hooks;
- - Building a Custom Pipe
- - Building a Nested Component;
- - Using a Nested Component;
- - Passing Data to a Nested Component Using @Input;
- - Rasing an Event from Nested Component Using @Output;
- - Building a Service;
- - Registering the Service;
- - Injecting the Service;
- - Routing;
+- Building a Template;
+- Using a Component as a Directive;
+- Biding with Interpolation;
+- Adding Logic with Directives;
+- Property Biding;
+- Handling Events with Event Biding;
+- Handling Input with Two-way Biding;
+- Transforming Data with Pipes;
+- Defining an Interface;
+- Encapsulating Component Styles;
+- Using Lifecycle Hooks;
+- Building a Custom Pipe
+- Building a Nested Component;
+- Using a Nested Component;
+- Passing Data to a Nested Component Using @Input;
+- Rasing an Event from Nested Component Using @Output;
+- Building a Service;
+- Registering the Service;
+- Injecting the Service;
+- Routing;
  
- ## Arquitetura da Aplicação
+## Arquitetura da Aplicação
  
- (colocar a imagem da arquitetura do projeto que foi desenvolvido)
+(colocar a imagem da arquitetura do projeto que foi desenvolvido)
  
- ## Demo do projeto
+## Demo do projeto
  
- - [Buy it! Store by Glaucia Lemos] (http://glaucia86.github.io/buyItStore/)
+- [Buy it! Store by Glaucia Lemos] (http://glaucia86.github.io/buyItStore/)
  
- ## Executar Localmente
+## Executar Localmente
  
- Caso você deseja executar o projeto na sua máquina local, basta seguir os passos abaixo:
+Caso você deseja executar o projeto na sua máquina local, basta seguir os passos abaixo:
  
- ## Começando
+## Começando
  
- Para começar você deve simplesmente clonar o repositório do projeto e instalar as dependências.
+Para começar você deve simplesmente clonar o repositório do projeto e instalar as dependências.
  
- ### Pre-Requisitos
+### Pre-Requisitos
  
- Antes de instalar as dependências no projeto, você precisa já ter instalado na sua máquina o Node.Js. Caso não tenha, basta realizar o download [Aqui](https://nodejs.org/en/)
+Antes de instalar as dependências no projeto, você precisa já ter instalado na sua máquina o Node.Js. Caso não tenha, basta realizar o download [Aqui](https://nodejs.org/en/)
 
 ### Instalando as Dependências
  
- Você precisará de duas dependências para este projeto. A qual poderá ser obtida da seguinte maneira:
+Você precisará de duas dependências para este projeto. A qual poderá ser obtida da seguinte maneira:
  
- Abre o cmd (caso esteja utilizando o Windows) e digite a path do seu projeto
+Abre o cmd (caso esteja utilizando o Windows) e digite a path do seu projeto
  
- ```
+  ```
  cd "C:\Users\NomeDoComputador\Documents\..."
  ```
  
- Depois, basta digitar no cmd a seguinte instrução:
+Depois, basta digitar no cmd a seguinte instrução:
  
  ```
  npm install
  ```
  
- Ao digitar a instrução acima, automaticamente ele irá baixar todas as dependências listadas no arquivo package.Json e mais o bower.Json para o projeto. Criando assim, duas pastas no projeto: 
+Ao digitar a instrução acima, automaticamente ele irá baixar todas as dependências listadas no arquivo package.Json e mais o typings.JSon para o projeto. Criando assim, duas pastas no projeto: 
  
- * `node_modules` - que contêm os packages do npm que precisará para o projeto.
- * `typings` - contêm os arquivos necessários para executar os arquivos relacionados ao TypeScript.
+* `node_modules` - que contêm os packages do npm que precisará para o projeto.
+* `typings` - contêm os arquivos necessários para executar os arquivos relacionados ao TypeScript.
  
- ### Executando a Aplicação
+### Executando a Aplicação
  
- Bom, agora na mesma tela do cmd, basta iniciar o server para o projeto ser executado localmente.
+Bom, agora na mesma tela do cmd, basta iniciar o server para o projeto ser executado localmente.
  
  ```
  npm start
  ```
- Agora, abre a página da aplicação em `http://localhost:3000/`. E pronto a aplicação será executada de maneira local na sua máquina.
+Agora, abre a página da aplicação em `http://localhost:3000/`. E pronto a aplicação será executada de maneira local na sua máquina.
  
