@@ -11,18 +11,22 @@ body {
 footer {
   bottom: 0;
   height: auto;
-  padding-bottom: 70px;
+  padding-bottom: 90px;
   position: absolute;
-  width: 100%;;
+  width: 100%;
   background-color: #ff8a65;
 }
 
-footer.footer-copyright {
-  overflow: hidden;
-  height: 50px;
-  line-height: 50px;
+.footer-bottom {
+  line-height: 20px;
+  height: auto;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(51, 51, 51, 0.08);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .white-text {

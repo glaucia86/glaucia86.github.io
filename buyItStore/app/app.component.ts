@@ -31,7 +31,8 @@ import { ProductDetailComponent } from './products/product-detail.component';
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-lg-8">
                 <h3 class="white-text">Informações da Empresa:</h3>
-                <p class="white-text">We are a team of college students working on this project like it's our full time job.</p>
+                <p class="white-text">Não tem certeza do que quer comprar? Não perca tempo! E venha comprar no Buy It! 
+                O seu lugar da compra certa!</p>
             </div>
             <div class="col-xs-6 col-lg-4">
                 <h3 class="white-text">Gostou? Entre em Contato!</h3>
@@ -44,13 +45,11 @@ import { ProductDetailComponent } from './products/product-detail.component';
                 </ul>
             </div>
         </div>
-        <div class="footer.footer-copyright">
-            <div class="container">
-            Developed by <a href="www.code4coders.wordpress.com">Glaucia Lemos</a>
-            </div>
-        </div>
       </div>
     </footer>
+    <div class="footer-bottom">
+          <p><center>Copyright © Developed by Glaucia Lemos 2016. All rights reserved.</center></p>
+      </div>
     ` ,
     directives: [ROUTER_DIRECTIVES],
     providers:  [ProductService,
