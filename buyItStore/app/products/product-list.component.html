@@ -1,7 +1,7 @@
 <!-- Página para apresentar Lista de Produtos -->
 
 <!-- Início do Heading do Painel da Página -->
-<div class="panel panel-primary">
+<div class="panel panel-success">
 	<div class="panel-heading">
 		{{pageTitle}}   
 	</div>
@@ -27,7 +27,7 @@
 			<thead>
 				<tr>
 					<th>
-						<button class="btn btn-primary" (click)='toggleImage()'>
+						<button class="btn btn-success" (click)='toggleImage()'>
                             {{showImage ? 'Esconder' : 'Mostrar'}} Imagem
                         </button>
 					</th>
@@ -56,7 +56,8 @@
                     <td>{{product.price | currency:'BRS':true:'1.2-2'}}</td>
                     <td>
 						<bi-star [rating]='product.starRating'
-							(ratingClicked)='onRatingClicked($event)'></bi-star>
+							(ratingClicked)='onRatingClicked($event)'>
+						</bi-star>
 					</td>
                 </tr>
 			</tbody>

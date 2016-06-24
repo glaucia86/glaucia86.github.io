@@ -1,4 +1,4 @@
-<div class='panel panel-primary' *ngIf='product'>
+<div class='panel panel-success' *ngIf='product'>
     <div class='panel-heading' style='font-size:large'>
         {{pageTitle + ': ' + product.productName }}
     </div>
@@ -10,22 +10,27 @@
                     <div class='col-md-3'>Nome:</div>
                     <div class='col-md-6'>{{product.productName}}</div>
                 </div>
+                <br/>
                 <div class='row'>
                     <div class='col-md-3'>Código:</div>
                     <div class='col-md-6'>{{product.productCode}}</div>
                 </div>
+                <br/>
                 <div class='row'>
                     <div class='col-md-3'>Descrição:</div>
                     <div class='col-md-6'>{{product.description}}</div>
                 </div>
+                <br/>
                 <div class='row'>
                     <div class='col-md-3'>Disponibilidade:</div>
                     <div class='col-md-6'>{{product.releaseDate}}</div>
                 </div>
+                <br/>
                 <div class='row'>
                     <div class='col-md-3'>Preço:</div>
                     <div class='col-md-6'>{{product.price | currency:'BRS':true}}</div>
                 </div>
+                <br/>
                 <div class='row'>
                     <div class='col-md-3'>Avaliação dos Clientes:</div>
                     <div class='col-md-6'>
@@ -44,9 +49,9 @@
         </div>
     </div>
 
-    <div class='panel-footer'>
+    <div class='panel-footer' style='background-color:#f1f8e9'>
         <a class='btn btn-default' (click)='onBack()' style='width:80px'>
-            <i class='glyphicon glyphicon-chevron-left'></i> Back
+            <i class='glyphicon glyphicon-chevron-left'></i> Voltar
         </a>
     </div>
 </div>

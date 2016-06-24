@@ -40,7 +40,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 ], StarComponent.prototype, "ratingClicked", void 0);
                 StarComponent = __decorate([
                     core_1.Component({
-                        selector: 'ai-star',
+                        selector: 'bi-star',
                         templateUrl: 'app/shared/star.component.html',
                         styleUrls: ['app/shared/star.component.css']
                     }), 
