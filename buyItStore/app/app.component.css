@@ -1,7 +1,84 @@
-li {
-    font-size: large;
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px;
+    /* bottom = footer height */
+}
+
+footer {
+  bottom: 0;
+  height: auto;
+  padding-bottom: 70px;
+  position: absolute;
+  width: 100%;;
+  background-color: #ff8a65;
+}
+
+footer.footer-copyright {
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(51, 51, 51, 0.08);
+}
+
+.white-text {
+  color: #FFFFFF !important;
 }
 
 div.panel-heading {
    font-size: x-large; 
+}
+
+li {
+  list-style: none;
+}
+
+/*Social bottons*/
+
+.social li {
+  background: none repeat scroll 0 0 #d50000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 8px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+
+.social li:hover {
+  transform: scale(1.15) rotate(360deg);
+  -webkit-transform: scale(1.1) rotate(360deg);
+  -moz-transform: scale(1.1) rotate(360deg);
+  -ms-transform: scale(1.1) rotate(360deg);
+  -o-transform: scale(1.1) rotate(360deg);
+}
+
+.social li a {
+  color: #FFFFFF;
+}
+
+.social li:hover {
+  border: 2px solid #263238;
+  background: #263238;
+}
+
+.social li a i {
+  font-size: 16px;
+  margin: 0 0 0 5px;
+  color: #EDEFF1 !important;
 }
