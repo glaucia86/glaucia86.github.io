@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
     <link href="css/main.css" rel="stylesheet" />
 
-    <!-- Include the AngularJS library -->
+    <!-- Biblioteca do Angular.Js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
   </head>
   <body ng-app="myApp">
@@ -25,7 +25,7 @@
 
         <div ng-repeat="product in products" class="col-md-6">
           <div class="thumbnail">
-            <img src="img/the-book-of-trees.jpg" alt="The Book of Trees">
+            <img ng-src="{{product.cover}}" alt="The Book of Trees">
             <p class="title">{{product.name | uppercase}}</p>
             <p class="price">{{product.price | currency}}</p>
             <p class="date">{{product.pubDate | date}}</p>
@@ -42,10 +42,10 @@
         <img src="https://s3.amazonaws.com/codecademy-content/projects/shutterbugg/google-play.png" width="110px" />
       </div>
     </div>
-    <!-- Modules -->
+    <!-- Módulos -->
     <script src="js/app.js"></script>
 
-    <!-- Controllers -->
+    <!-- Controladores -->
     <script src="js/controllers/MainController.js"></script>
   </body>
 </html>
