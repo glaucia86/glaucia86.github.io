@@ -41,4 +41,9 @@ app.controller('MainController', ['$scope', function($scope) {
    $scope.plusOne = function(index) {
     $scope.products[index].likes += 1;
   };
+
+  /* Função para poder adicionar os dislikes dos produtos */
+  $scope.minusOne = function(index) {
+    $scope.products[index].dislikes += 1;
+  }
 }]);
