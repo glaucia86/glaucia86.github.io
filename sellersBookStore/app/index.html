@@ -29,6 +29,9 @@
             <p class="title">{{product.name | uppercase}}</p>
             <p class="price">{{product.price | currency}}</p>
             <p class="date">{{product.pubDate | date}}</p>
+            <div class="rating">
+              <p class="likes" ng-click="plusOne($index)">+{{product.likes}}</p>
+            </div>
           </div>
         </div>
 
