@@ -21,7 +21,7 @@
     <div class="main" ng-controller="MainController">
       <div class="container">
         <h1>{{title}}</h1>
-        <h2>{{promo}}</h2>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;{{promo}}</h2>
 
         <div ng-repeat="product in products" class="col-md-6">
           <div class="thumbnail">
@@ -30,8 +30,8 @@
             <p class="price">{{product.price | currency}}</p>
             <p class="date">{{product.pubDate | date}}</p>
             <div class="rating">
-              <p class="likes" ng-click="plusOne($index)">+{{product.likes}}</p>
-              <p class="dislikes" ng-click="minusOne($index)">-{{product.dislikes}}</p>
+              <p class="likes" ng-click="plusOne($index)">+ {{product.likes}}</p>
+              <p class="dislikes" ng-click="minusOne($index)">- {{product.dislikes}}</p>
             </div>
           </div>
         </div>
@@ -42,8 +42,8 @@
     <div class="footer">
       <div class="container">
         <h2>Disponível para iPhone e Android.</h2>
-        <img src="https://s3.amazonaws.com/codecademy-content/projects/shutterbugg/app-store.png" width="120px" />
-        <img src="https://s3.amazonaws.com/codecademy-content/projects/shutterbugg/google-play.png" width="110px" />
+        <img src="../img/app-store.png" width="120px" />
+        <img src="../img/google-play.png" width="110px" />
       </div>
     </div>
     <!-- Módulos -->
