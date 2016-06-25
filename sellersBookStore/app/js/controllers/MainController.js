@@ -1,4 +1,4 @@
-/* Arquivo responsável por toda a lógica do projeto */
+/* Controlador responsável por toda a lógica do projeto */
 
 app.controller('MainController', ['$scope', function($scope) {
   $scope.title = 'Os Melhores Best-Sellers Ever!';
