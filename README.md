@@ -16,3 +16,7 @@ Mais um projeto desenvolvido em Angular.Js (versão 1.2.x). O projeto cria revie
 - [Buy it! Store developed by Glaucia Lemos] (http://glaucia86.github.io/buyItStore/)
 
 Desenvolvimento de mais uma aplicação em Angular.Js, porém dessa vez com a versão 2 e mais com o TypeScript. O projeto tem como intenção criar um gerenciamento de produtos listados (já pré-definidos no products.json). O usuário pode listar um determinado produto usando um filtro e detalhar as especificações sobre o produto. O design do projeto foi realizado no conceito SPA (Single Page Application).
+
+- [Sellers Book Store! developed by Glaucia Lemos] (http://glaucia86.github.io/sellersBookStore/app/)
+
+Desenvolvimento de mais uma aplicação em Angular 1.x, para poder aprofundar os conhecimentos básicos sobre o framework estudado. O objetivo do projeto é mostrar uma página SPA onde contém os best-sellers dos livros da Amazon.com.
