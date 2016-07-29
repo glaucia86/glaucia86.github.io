@@ -48,7 +48,18 @@ h3 {
    font-weight: normal;
    font-size: 16px;
    text-align: center;
-   color: #fff;
+   margin: 5px 0;
+   padding: 0;
+   z-index: 1;
+   position: relative;
+}
+
+h5 {
+   font-family: Oswald;
+   font-weight: normal;
+   font-size: 16px;
+   text-align: center;
+   color: #CD853F;
    margin: 5px 0;
    padding: 0;
    z-index: 1;
@@ -185,9 +196,104 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 	background-size: cover;
 }
 
+#slide6{
+	background-color: #fff;
+	color: #333333;
+	height: 300px;
+	padding: 200px 0;
+}
+
+
+/* FORMULÁRIO
+-----------------------------------------------------------------------------------*/
+.formContato {
+      width: 100%;
+  }
+
+  .formContato input {
+      width: 90%;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+  .formContato textarea {
+      width: 90%;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+  .botaoContato {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 1px;
+  }
+
+  .pgContato input {
+      padding-left: 20px;
+      color: #292929;
+      font-size: 18px;
+      background-color: #E9E9E9;
+      border: 1px solid #E9E9E9;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      height: 40px;
+      width: 100%;
+      float: left;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+  }
+
+  .pgContato textarea {
+      padding-left: 20px;
+      color: #292929;
+      font-size: 18px;
+      background-color: #E9E9E9;
+      border: 1px solid #E9E9E9;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      height: 200px;
+      width: 100%;
+      float: left;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      border-left: 1px solid #ccc; 
+  }
+
+  .botaoContato {
+      border-radius: 4px;
+      color: #fff;
+      padding: 2px 40px;
+      height: 40px;
+      margin-top: 18px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+      cursor: pointer;
+      background: rgb(162,27,27);
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+      background: -moz-linear-gradient(top, rgb(162,27,27) 0%, rgb(162,27,27) 20%, rgb(162,27,27) 93%, rgb(162,27,27) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(162,27,27)), color-stop(20%,rgb(162,27,27)), color-stop(93%,rgb(162,27,27)), color-stop(100%,rgb(162,27,27)));
+      background: -webkit-linear-gradient(top, rgb(162,27,27) 0%,rgb(162,27,27) 20%,rgb(162,27,27) 93%,rgb(162,27,27) 100%);
+      background: -o-linear-gradient(top, rgb(162,27,27) 0%,rgb(162,27,27) 20%,rgb(162,27,27) 93%,rgb(162,27,27) 100%);
+      background: -ms-linear-gradient(top, rgb(162,27,27) 0%,rgb(162,27,27) 20%,rgb(162,27,27) 93%,rgb(162,27,27) 100%);
+      background: linear-gradient(to bottom, rgb(162,27,27) 0%,rgb(162,27,27) 20%,rgb(162,27,27) 93%,rgb(162,27,27) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a21b1b', endColorstr='#a21b1b',GradientType=0 );
+      display: inline-block;
+      border: none;
+      border-bottom: 1px solid #500707;
+      border-right: 1px solid #500707;
+  }
+
+  .botaoContato:hover {
+      opacity: 1.0;
+      transition: 1s;
+  }
+
 
 /*= FOOTER 
 --------------------------------------------------------*/
 
-#copyright  { color: #fff; font-family:"Wellfleet";  font-size: 14px; margin-top: 100px; text-align: center;  }
-#copyright  a { text-decoration: none; color: #fff;  }
+#copyright  { color: #000000; font-family:"Wellfleet";  font-size: 14px; margin-top: 100px; text-align: center;  }
+#copyright  a { text-decoration: none; color: #000000;  }
