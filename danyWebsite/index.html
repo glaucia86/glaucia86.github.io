@@ -7,3 +7,65 @@ usar os recursos de Bootstrap e de Angular.Js se for necessário....
 Author: Glaucia Lemos - Full Stack Software Developer - Pround to be a geek! :)
 -->
 
+<!DOCTYPE html>
+<html lang="es-ar">
+    <head>
+    <meta http-equiv="Content-Type" content="text-html; charset=utf-8">
+    <title>Daniela Bertone - Curso de Idiomas</title>
+    <link rel="stylesheet" type="" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+
+    <!-- Script para tratar a navegação no estilo parallax: JQuery -->
+    <script>
+        $(document).ready(function() {
+            $('a[href*=#]').each(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                && location.hostname == this.hostname
+                && this.hash.replace(/#/, '') ) {
+                    var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+                    var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+                    if ($target) {
+                        var targetOffset = $target.offset().top;
+    
+                    $(this).click(function() {
+                    $("#nav li a").removeClass("active");
+                    $(this).addClass('active');
+                    $('html, body').animate({scrollTop: targetOffset}, 1000);
+                    return false;
+                });
+            }
+        }
+    });
+});
+    </script>	
+</head>
+<body>
+    <div id="demo_back">
+        <a href="#" class="lpanel"></a>
+        <a href="#" class="rpanel"></a>
+    </div>    
+
+    <!--Começo do header-->
+    <header id="header">
+        <div class="content">
+            <div id="logo"> <a href="">Daniela Bertone</a></div>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="#slide1" class="active" title="Prójima Sección">Sección 1</a></li>
+                    <li><a href="#slide2" title="Prójima sección">Sección 2</a></li>
+                    <li><a href="#slide3" title="Prójima sección">Sección 3</a></li>
+                    <li><a href="#slide4" title="Prójima sección">Sección 4</a></li>
+                    <li><a href="#slide5" title="Prójima sección">Sección 5</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>    
+</html>
