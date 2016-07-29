@@ -12,8 +12,8 @@ Author: Glaucia Lemos - Full Stack Software Developer - Pround to be a geek! :)
     <head>
     <meta http-equiv="Content-Type" content="text-html; charset=utf-8">
     <title>Daniela Bertone - Curso de Idiomas</title>
+
     <link rel="stylesheet" type="" href="css/style.css">
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
@@ -21,29 +21,6 @@ Author: Glaucia Lemos - Full Stack Software Developer - Pround to be a geek! :)
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
 
-    <!-- Script para tratar a navegação no estilo parallax: JQuery -->
-    <script>
-        $(document).ready(function() {
-            $('a[href*=#]').each(function() {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-                && location.hostname == this.hostname
-                && this.hash.replace(/#/, '') ) {
-                    var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-                    var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-                    if ($target) {
-                        var targetOffset = $target.offset().top;
-    
-                    $(this).click(function() {
-                    $("#nav li a").removeClass("active");
-                    $(this).addClass('active');
-                    $('html, body').animate({scrollTop: targetOffset}, 1000);
-                    return false;
-                });
-            }
-        }
-    });
-});
-    </script>	
 </head>
 <body>
     <div id="demo_back">
@@ -163,5 +140,9 @@ Author: Glaucia Lemos - Full Stack Software Developer - Pround to be a geek! :)
     <!-- Fim da Área do Slide 6 -->
 
     <!-- Fim dos slides -->
+    <script type="text/javascript" async="async" src="js/jquery-1.10.2.min.js"></script>
+
+    <!-- Script para tratar a navegação no estilo parallax: JQuery -->
+    <script type="text/javascript" async="async" src="js/parallaxEffect.js"></script>	
 </body>    
 </html>
