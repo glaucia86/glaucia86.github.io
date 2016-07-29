@@ -1,0 +1,15 @@
+/* 
+Arquivo de Estilo da pagina
+Data de criação do arquivo: 29/07/2015
+Hora: 00:34
+Descrição: Site desenvolvido de maneira responsiva e utilizando o recurso do  efeito parallax
+Author: Glaucia Lemos - Full Stack Software Developer - Pround to be a geek! :)
+*/
+
+/* Estilo geral da página */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
