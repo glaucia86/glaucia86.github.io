@@ -17,7 +17,7 @@ Author: Samuel Dalusung
 /*= Estilo Geral
 --------------------------------------------------------*/
 
-body{
+body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -116,16 +116,10 @@ a.rpanel:hover{ color: #fff; }
   margin: 50px auto;
 }
    
- .author_name_white { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #fff; font-size: 20px; }  
- .author_name_gray { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #94a4a4; font-size: 20px; }  
+ .author_name_white { font-family:"Wellfleet";  margin: 70px 0 0 75px; color:#2196f3; text-shadow:#000000 2px 3px 1px; font-size: 20px; }  
+ .author_name_gray { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #000000; font-size: 20px; }  
  .quotes_container { width: 800px; margin: 0 auto; }
-#christmas_tree { background: url('../img/christmas-tree.png')no-repeat; width: 48px; height: 77px; margin: 0 auto; position: relative; bottom: -35px;}
-#divider { background: url('../img/divider.png')no-repeat; width: 300px; height: 35px; margin: 0px auto 27px auto; }
 #ribbon { background: url('../img/ribbon.png')no-repeat; width: 251px; height: 48px; margin: 0 auto;  display: block; position: relative; top: -38px; }
-#snowflakes1 { background: url('../img/snowflakes.png')no-repeat; width: 24px; height: 21px; margin: 0 auto;  display: block; position: relative; bottom: -54px; left: -102px; }
-#snowflakes2 { background: url('../img/snowflakes.png')no-repeat; width: 24px; height: 21px; margin: 0 auto;  display: block; position: relative; bottom: -33px;  right: -100px; }
-
-
 
 /*= Botões
 --------------------------------------------------------*/
@@ -154,17 +148,17 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 --------------------------------------------------------*/
 
 #slide1, #slide2{ width: 100%; }
-#slide1{
+#slide1 {
 	background:url('../img/slide1.jpg') 50% 0 no-repeat fixed;
-	color: #fff;
+	color: #263238;
 	height: 600px;
 	margin: 0;
 	padding: 200px 0 260px 0;
 	background-size: cover;
 }
 
-#slide2{
-	background-color: #fff;
+#slide2 {
+	background-color: #e1f5fe;
 	color: #333333;
 	height: 300px;
 	margin: 0 auto;
@@ -172,16 +166,17 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 	padding: 200px 0;
 }
 
-#slide3{
+#slide3 {
 	background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
-	color: #fff;
+	color: #fdd835;
+    text-shadow:#000000 2px 1px 1px;
 	height: 600px;
 	padding: 170px 0 0 0;	
 	background-size: cover;
 }
 
-#slide4{
-	background-color: #fff;
+#slide4 {
+	background-color: #e1f5fe;
 	color: #333333;
 	height: 300px;
 	padding: 200px 0;
@@ -192,11 +187,12 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 	height: 200px;
 	margin: 0 auto;
 	padding: 250px 0;
-	color: #fff;
+	color: #fdd835;
+    text-shadow:#000000 2px 1px 1px;
 	background-size: cover;
 }
 
-#slide6{
+#slide6 {
 	background-color: #fff;
 	color: #333333;
 	height: 300px;
