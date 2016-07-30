@@ -69,11 +69,7 @@ h5 {
 .center { margin: 0 auto; }
 .content{ margin: 0 auto; width: 960px; }
 .clear { clear: both; }
-a.lpanel { float: left; color: #e1e1e1; font-size: 12px; font-family:"Wellfleet"; text-decoration: none; margin: 7px 11px; }
-a.rpanel { float: right; color: #e1e1e1;  font-size: 12px; font-family:"Wellfleet"; text-decoration: none; margin: 7px 11px; }
 
-a.lpanel:hover{ color: #fff; }
-a.rpanel:hover{ color: #fff; }
 /*= HEADER & NAVIGATION
 --------------------------------------------------------*/
 
