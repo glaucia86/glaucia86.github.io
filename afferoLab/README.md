@@ -1,7 +1,6 @@
-# Projeto Gem Store - Shaping Up With Angular.Js 
+# Desafio - Affero Lab
 
-Desenvolvimento de um pequeno projeto em Angular.Js (versão 1.2.x) para aprofundar os conhecimentos básicos sobre o framework estudado através do curso Shaping Up With Angular.Js - Code School.
-O projeto tem como intenção listar joias já contidas no Json permitindo também que o usuário possa criar novas reviews das joias já listadas na página.
+Desenvolvimento de um pequeno projeto em Angular.Js (versão 1.2.x) para o desafio para a empresa: Affero Lab.
 
 ## Recursos utilizados no desenvolvimento:
 
@@ -13,7 +12,7 @@ O projeto tem como intenção listar joias já contidas no Json permitindo tamb�
 
 ## Demo do projeto
 
-- [Gem Store developed by Glaucia Lemos] (http://glaucia86.github.io/gemStore/)
+- [Affero Lab developed by Glaucia Lemos] (http://glaucia86.github.io/afferoLab/)
 
 ## Executar Localmente
 
@@ -56,7 +55,7 @@ Bom, agora na mesma tela do cmd, basta iniciar o server para o projeto ser execu
 npm start
 ```
 
-Agora, abre a página da aplicação em `http://localhost:4000/index.html`. E pronto a aplicação será executada de maneira local na sua máquina.
+Agora, abre a página da aplicação em `http://localhost:8000/index.html`. E pronto a aplicação será executada de maneira local na sua máquina.
 
 
 
