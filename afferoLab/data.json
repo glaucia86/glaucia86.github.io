@@ -1,0 +1,23 @@
+﻿{
+  "Text": "Qual a capital de Pernambuco?",
+  "FeedbackCorrect": "Você acertou! <strong>Recife</strong> é a capital de Pernambuco!",
+  "FeedbackIncorrect" :  "Você errou! A capital de Pernambuco é <strong>Recife</strong>.",
+  "Options": [
+    {
+      "Text": "Salvador",
+      "IsCorrect": false
+    },
+    {
+      "Text": "Natal",
+      "IsCorrect": false
+    },
+    {
+      "Text": "Recife",
+      "IsCorrect": true
+    },
+    {
+      "Text": "Fortaleza",
+      "IsCorrect":  false
+    }
+  ]
+}
