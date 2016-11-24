@@ -64,42 +64,22 @@ app.directive('quiz', function(quizFactory) {
 });
 
 app.factory('quizFactory', function() {
-    var questions = [
-        {
-            question: "Qual a capital de Pernambuco?",
-            options: ["Salvador", "Natal", "Recife", "Fortaleza", "Amapá"],
-            answer: 2
-        },
-        {
-            question: "Qual desses Países não é Europeu?",
-            options: ["Macedonia", "Espanha", "Polonia", "Casaquistão", "França" ],
-            answer: 3
-        },
-        {
-            question: "Qual desses não é uma ilha?",
-            options: ["Libia", "Bermudas", "Barbados", "Haiti", "Madagascar" ],
-            answer: 0
-        },
+	var questions = [
+		{
+			question: "Qual a capital de Pernambuco?",
+			options: ["Salvador", "Natal", "Recife", "Fortaleza", "Amapá"],
+			answer: 2
+		}
+	];
 
-        {
-            question: "Além da Turquia, qual outro país está presente em dois continentes?",
-            options: ["Libia", "Rússia", "Polonia", "Casaquistão", "China" ],
-            answer: 1
-        },
-        {
-            question: "Qual desses países não é africano?",
-            options: ["Madagascar", , "Polonia", "Egito", "Africa do Sul", "Ruanda" ],
-            answer: 1
-        }
-    ];
-
-    return {
-        getQuestion: function(id) {
-            if(id < question.length) {
-                return questions[id];
-            } else {
-                return false;
-            }
-        }
-    };
+	return {
+		getQuestion: function(id) {
+			if(id < questions.length) {
+				return questions[id];
+			} else {
+				return false;
+			}
+		}
+	};
 });
+
