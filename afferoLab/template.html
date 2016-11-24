@@ -5,13 +5,13 @@
             <li ng-repeat="option in options">
                 <label>
                     <input type="radio" name="answer" value="{{option}}">
-                    {{option}}
+                    {{option}} 
                 </label>
             </li>
         </ul>
 
         <button class="btn btn-lg btn-primary" ng-click="checkAnswer()" ng-show="answerMode">Verificar Resposta</button>
-    
+        
         <div ng-show="!answerMode">
             <span ng-show="correctAns">
                 <div class="alert alert-success" role="alert">
