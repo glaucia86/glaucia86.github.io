@@ -4,7 +4,7 @@ Desenvolvimento de um pequeno projeto em Angular.Js (versão 1.2.x) para o desaf
 
 ## Recursos utilizados no desenvolvimento:
 
-- Angular.Js v. 1.2x;
+- Angular.Js versão 1.5.8;
 - JSon;
 - Uso de diretivas e controladores no projeto;
 - Framework Bootstrap 3;
