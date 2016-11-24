@@ -91,7 +91,7 @@ app.factory('quizFactory', function() {
             options: ["Madagascar", , "Polonia", "Egito", "Africa do Sul", "Ruanda" ],
             answer: 1
         }
-    ],
+    ];
 
     return {
         getQuestion: function(id) {
