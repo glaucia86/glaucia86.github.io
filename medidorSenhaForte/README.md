@@ -13,7 +13,7 @@ Código desenvolvido durante o artigo escrito sobre como criar um medidor de sen
 
 ## Demo do projeto
 
-- [GH Pages developed by Glaucia Lemos]()
+- [GH Pages developed by Glaucia Lemos](http://glaucia86.github.io/medidorSenhaForte/)
 
 ## Executar Localmente
 
