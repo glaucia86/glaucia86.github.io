@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- 
+
 <html lang="pt-br" class="no-js" ng-app="SenhaSegura">
 
 <head>
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
 </head>
+
 <body>
     <div class="jumbotron">
         <h1 class="text-center"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Tutorial Code4Coders</h1>
@@ -22,60 +23,64 @@
         <h4 class="text-center">Desenvolvido com muito <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Brasil, Rio de Janeiro <a href="http://www.code4coders.wordpress.com" target="_blank"> - 2017</a> </h4>
     </div>
     <!--/ .container -->
-    <div class="main-container">
-        <!-- Início do formulário -->
-        <form action="" method="POST" role="form" name="cadastreAqui" ng-controller="FormController">
-            <legend class="form-labe">Cadastre Aqui!</legend>
+    <div class="row">
+        <div class="col-xs-6 col-md-4"></div>
+        <div class="col-xs-6 col-md-4">
+            <!-- Início do formulário -->
+            <form action="" method="POST" role="form" name="cadastreAqui" ng-controller="FormController">
+                <legend class="form-labe">Cadastre Aqui!</legend>
 
-            <!-- Início do campo: Nome Completo -->
-            <div class="form-group">
-                <label for="nomecompleto">Nome Completo</label>
-                
-                <div class="error form-hint" ng-show="cadastreAqui.nomecompleto.$dirty && cadastreAqui.nomecompleto.$error.required" ng-cloak>
-                    {{"Campo Obrigatório."}}
+                <!-- Início do campo: Nome Completo -->
+                <div class="form-group">
+                    <label for="nomecompleto">Nome Completo</label>
+
+                    <div class="error form-hint" ng-show="cadastreAqui.nomecompleto.$dirty && cadastreAqui.nomecompleto.$error.required" ng-cloak>
+                        {{"Campo Obrigatório."}}
+                    </div>
+
+                    <input type="text" class="form-control" ng-class="(cadastreAqui.nomecompleto.$dirty && cadastreAqui.nomecompleto.$invalid) ? 'error' : ''" id="nomecompleto" name="nomecompleto" placeholder="Digite o seu Nome Completo" ng-required="true" ng-model="nomecompleto">
                 </div>
+                <!-- Fim do campo: Nome Completo -->
 
-                <input type="text" class="form-control" ng-class="(cadastreAqui.nomecompleto.$dirty && cadastreAqui.nomecompleto.$invalid) ? 'error' : ''" id="nomecompleto" name="nomecompleto" placeholder="Digite o seu Nome Completo" ng-required="true" ng-model="nomecompleto">
-            </div>
-            <!-- Fim do campo: Nome Completo -->
+                <!-- Início do campo: Email -->
+                <div class="form-group">
+                    <label for="email">E-mail</label>
 
-            <!-- Início do campo: Email -->
-            <div class="form-group">
-                <label for="email">E-mail</label>
+                    <div class="error form-hint" ng-show="cadastreAqui.email.$dirty && cadastreAqui.email.$error.required" ng-cloak>
+                        {{"Campo Obrigatório."}}
+                    </div>
 
-                <div class="error form-hint" ng-show="cadastreAqui.email.$dirty && cadastreAqui.email.$error.required" ng-cloak>
-                    {{"Campo Obrigatório."}}
+                    <div class="error form-hint" ng-show="cadastreAqui.email.$dirty && cadastreAqui.email.$error.email" ng-cloak>
+                        {{"E-mail inválido."}}
+                    </div>
+
+                    <input type="email" class="form-control" ng-class="(cadastreAqui.email.$dirty && cadastreAqui.email.$invalid) ? 'error' : ''" id="email" name="email" placeholder="Digite o seu E-mail" ng-required="true" ng-model="email">
                 </div>
+                <!-- Fim do campo: Email -->
 
-                <div class="error form-hint" ng-show="cadastreAqui.email.$dirty && cadastreAqui.email.$error.email" ng-cloak>
-                    {{"E-mail inválido."}}
+                <!-- Início do campo: Senha -->
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+
+                    <div class="form-hint">Para que a senha digitada esteja dentro da conformidade com a nossa política de senha é necessário criar uma senha suficientemente forte. A senha deve conter mais de 7 caracteres.
+                    </div>
+
+                    <input type="password" class="form-control senha-ok" ng-class="(cadastreAqui.senha.$dirty && cadastreAqui.senha.$invalid) ? 'error' : ''" id="senha" name="senha" placeholder="Digite a Senha" ng-required="true" ng-model="senha">
+
+                    <div class="label password-count" ng-class="senha.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ senha | tamanhoSenha:7 }}</div>
+
+                    <div class="strength-meter">
+                        <div class="strength-meter-fill" data-strength="{{senhaSegura}}"></div>
+                    </div>
+
                 </div>
+                <!-- Fim do campo: Senha -->
 
-                <input type="email" class="form-control" ng-class="(cadastreAqui.email.$dirty && cadastreAqui.email.$invalid) ? 'error' : ''" id="email" name="email" placeholder="Digite o seu E-mail" ng-required="true" ng-model="email">
-            </div>
-            <!-- Fim do campo: Email -->
-
-            <!-- Início do campo: Senha -->
-            <div class="form-group">
-                <label for="senha">Senha</label>
-
-                <div class="form-hint">Para que a senha digitada esteja dentro da conformidade com a nossa política de senha é necessário criar uma senha suficientemente forte. A senha deve conter mais de 7 caracteres.
-                </div>
-
-                <input type="password" class="form-control senha-ok" ng-class="(cadastreAqui.senha.$dirty && cadastreAqui.senha.$invalid) ? 'error' : ''" id="senha" name="senha" placeholder="Digite a Senha" ng-required="true" ng-model="senha">
-
-                <div class="label password-count" ng-class="senha.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ senha | tamanhoSenha:7 }}</div>
-
-                <div class="strength-meter">
-                    <div class="strength-meter-fill" data-strength="{{senhaSegura}}"></div>
-            </div>            
-                
-            </div>
-            <!-- Fim do campo: Senha -->
-
-            <button type="submit" class="btn btn-primary" ng-disabled="cadastreAqui.$invalid">Enviar</button>
-        </form>
-        <!-- Fim do formulário -->
+                <button type="submit" class="btn btn-primary" ng-disabled="cadastreAqui.$invalid">Enviar</button>
+            </form>
+            <!-- Fim do formulário -->
+        </div>
+        <div class="col-xs-6 col-md-4"></div>
     </div>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="assets/js/app.js"></script>
