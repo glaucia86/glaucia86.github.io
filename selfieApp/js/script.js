@@ -1,128 +1,143 @@
-// Abaixo segue todas as referências necessárias dos elementos que iremos necessitar:
+// References to all the element we will need.
+var video = document.querySelector('#camera-stream'),
+    image = document.querySelector('#snap'),
+    start_camera = document.querySelector('#start-camera'),
+    controls = document.querySelector('.controls'),
+    take_photo_btn = document.querySelector('#take-photo'),
+    delete_photo_btn = document.querySelector('#delete-photo'),
+    download_photo_btn = document.querySelector('#download-photo'),
+    error_message = document.querySelector('#error-message');
 
-var video 				= document.querySelector('#camera-stream'),
-	image 				= document.querySelector('#snap'),
-	start_camera 		= document.querySelector('#start-camera'),
-	controls			= document.querySelector('.controls'),
-	take_photo_btn  	= document.querySelector('#take-photo'),
-	delete_photo_btn 	= document.querySelector('#delete-photo-btn'),
-	download_photo_btn 	= document.querySelector('#download-photo'),
-	error_message 		= document.querySelector('#error-message');
 
-// O getUserMedia é usado para manipular a entrada da câmera.
-// Alguns navegadores precisam de prefixo para que possamos cobrir todas as opções:
-
+// The getUserMedia interface is used for handling camera input.
+// Some browsers need a prefix so here we're covering all the options
 navigator.getMedia = ( navigator.getUserMedia ||
-					   navigator.webkitGetUserMedia ||
-					   navigator.mozGetUserMedia ||
-					   navigator.msGetUserMedia);
+                      navigator.webkitGetUserMedia ||
+                      navigator.mozGetUserMedia ||
+                      navigator.msGetUserMedia);
 
-if(!navigator.getMedia) {
-	displayErrorMessage("Seu browser não tem suporte para o navigator.getUserMedia");
-} else {
-	// Solicita a câmera:
-	navigator.getMedia(
-		{
-			video: true
-		},
 
-		// Callback - Sucesso:
-		function(stream) {
+if(!navigator.getMedia){
+  displayErrorMessage("Your browser doesn't have support for the navigator.getUserMedia interface.");
+}
+else{
 
-			// Criará um objeto URL para o stream de video e irá
-			// iniciar como src do nosso elemento video do HTML
-			video.src = window.URL.createObjectURL(stream);
+  // Request the camera.
+  navigator.getMedia(
+    {
+      video: true
+    },
+    // Success Callback
+    function(stream){
 
-			// E depois irá dar um play no elemento video para mostrar o stream de video para o usuário:
-			video.play();
-			video.onplay = function() {
-				showVideo();
-			};
-		},
+      // Create an object URL for the video stream and
+      // set it as src of our HTLM video element.
+      video.src = window.URL.createObjectURL(stream);
 
-		// Callback - Error:
-		function(err) {
-			displayErrorMessage("Ococrreu um erro ao acessar o stream de vídeo " + err.name, err);
-		}
-	);
+      // Play the video element to start the stream.
+      video.play();
+      video.onplay = function() {
+        showVideo();
+      };
+
+    },
+    // Error Callback
+    function(err){
+      displayErrorMessage("There was an error with accessing the camera stream: " + err.name, err);
+    }
+  );
+
 }
 
-// Navegadores de celulares não podem reproduzir video sem entrada do usuário.
-// Com isso, iremos utilizar um botão para iniciar a app manualmente:
-start_camera.addEventListener("click", function(e) {
 
-	e.preventDefault();
 
-	// Iniciar o video manualmente:
-	video.play();
-	showVideo();
+// Mobile browsers cannot play video without user input,
+// so here we're using a button to start it manually.
+start_camera.addEventListener("click", function(e){
+
+  e.preventDefault();
+
+  // Start video playback manually.
+  video.play();
+  showVideo();
+
 });
 
-take_photo_btn.addEventListener("click", function(e) {
 
-	e.preventDefault();
+take_photo_btn.addEventListener("click", function(e){
 
-	var snap = takeSnapshot();
+  e.preventDefault();
 
-	// Mostrar imagem:
-	image.setAttribute('src', snap);
-	image.classList.add("visible");
+  var snap = takeSnapshot();
 
-	// Ativar os botões: excluir e salvar:
-	delete_photo_btn.classList.remove("disabled");
-	download_photo_btn.classList.remove("disabled");
+  // Show image. 
+  image.setAttribute('src', snap);
+  image.classList.add("visible");
 
-	//Definir o atributo href do botão de download para a URL:
-	download_photo_btn.href = snap;
+  // Enable delete and save buttons
+  delete_photo_btn.classList.remove("disabled");
+  download_photo_btn.classList.remove("disabled");
 
-	video.pause();
+  // Set the href attribute of the download button to the snap url.
+  download_photo_btn.href = snap;
+
+  // Pause video playback of stream.
+  video.pause();
+
 });
 
-delete_photo_btn.addEventListener("click", function(e) {
 
-	e.preventDefault();
+delete_photo_btn.addEventListener("click", function(e){
 
-	// Esconder a imagem:
-	image.setAttribute('src', "");
-	image.classList.remove("visible");
+  e.preventDefault();
 
-	// Desabilitar os botões: excluir e salvar:
-	delete_photo_btn.classList.add("disabled");
-	download_photo_btn.classList.add("disabled");
+  // Hide image.
+  image.setAttribute('src', "");
+  image.classList.remove("visible");
 
-	video.play();
+  // Disable delete and save buttons
+  delete_photo_btn.classList.add("disabled");
+  download_photo_btn.classList.add("disabled");
+
+  // Resume playback of stream.
+  video.play();
+
 });
 
-function showVideo() {
 
-	// Mostrar o stream de video e os controles:
-	hiddenUI();
-	video.classList.add("visible");
-	controls.classList.add("visible");
+
+function showVideo(){
+  // Display the video stream and the controls.
+
+  hideUI();
+  video.classList.add("visible");
+  controls.classList.add("visible");
 }
 
-function takeSnapshot() {
 
-	// Aqui estamos usando um truque que envolve um elemento de tela oculta.
-	var hidden_canvas = document.querySelector('canvas'),
-		context = hidden_canvas.getContext('2d');
+function takeSnapshot(){
+  // Here we're using a trick that involves a hidden canvas element.  
 
-	var width = video.videoWidth,
-		height = video.videoHeight;
+  var hidden_canvas = document.querySelector('canvas'),
+      context = hidden_canvas.getContext('2d');
 
-	if(width && height) {
+  var width = video.videoWidth,
+      height = video.videoHeight;
 
-		// Configura uma tela com as mesmas dimensões do vídeo.
-		hidden_canvas.width = width;
-        hidden_canvas.height = height;
+  if (width && height) {
 
-        // Make a copy of the current frame in the video on the canvas.
+    // Setup a canvas with the same dimensions as the video.
+    hidden_canvas.width = width;
+    hidden_canvas.height = height;
+
+    // Make a copy of the current frame in the video on the canvas.
     context.drawImage(video, 0, 0, width, height);
 
     // Turn the canvas image into a dataURL that can be used as a src for our photo.
     return hidden_canvas.toDataURL('image/png');
-	}
+  }
 }
+
 
 function displayErrorMessage(error_msg, error){
   error = error || "";
@@ -146,5 +161,3 @@ function hideUI(){
   snap.classList.remove("visible");
   error_message.classList.remove("visible");
 }
-
-
