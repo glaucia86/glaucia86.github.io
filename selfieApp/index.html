@@ -8,47 +8,44 @@
   <title>Demo - Selfie com JavaScript!</title>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </head>
 <body>
   <div class="jumbotron">
   		<h1 class="text-center"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Selfie com JavaScript</h1>
-      <h2 class="text-center">Tutorial Code4Coders</h2>
+      	<h2 class="text-center">Tutorial Code4Coders</h2>
   		<h3 class="text-center">Glaucia Lemos</h3>
   		<h4 class="text-center">Desenvolvido com muito <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Brasil, Rio de Janeiro <a href="http://www.code4coders.wordpress.com" target="_blank"> - 2017</a> </h4>
   </div>
 
-  <h3>Demo: Take a Selfie With JavaScript</h3>
+  <div class="container">
+  	<div class="app">
+  		<a href="#" id="start-camera" class="visible">Toque aqui para iniciar a App</a>
+  		<video id="camera-stream"></video>
+  		<img id="snap">
 
-<div class="container">
+  		<p id="error-message"></p>
 
-  <div class="app">
+  		<div class="controls">
+	        <a href="#" id="delete-photo" title="Excluir Foto" class="disabled"><i class="material-icons">Excluir</i></a>
+	        <a href="#" id="take-photo" title="Tirar Foto"><i class="material-icons">Tirar Foto</i></a>
+	        <a href="#" id="download-photo" download="selfie.png" title="Salvar Foto" class="disabled"><i class="material-icons">Salvar Foto</i></a>  
+    	</div>
 
-    <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
-    <video id="camera-stream"></video>
-    <img id="snap">
+     <!-- Elemento Canvas. Que será usado para poder tirar a foto por meio de um video. -->
+     <canvas></canvas>
 
-    <p id="error-message"></p>
-
-    <div class="controls">
-      <a href="#" id="delete-photo" title="Delete Photo" class="disabled"><i class="material-icons">delete</i></a>
-      <a href="#" id="take-photo" title="Take Photo"><i class="material-icons">camera_alt</i></a>
-      <a href="#" id="download-photo" download="selfie.png" title="Save Photo" class="disabled"><i class="material-icons">file_download</i></a>  
-    </div>
-
-    <!-- Hidden canvas element. Used for taking snapshot of video. -->
-    <canvas></canvas>
-
+  	</div>
   </div>
-
-</div>
 
 
   <script src="js/script.js"></script>
