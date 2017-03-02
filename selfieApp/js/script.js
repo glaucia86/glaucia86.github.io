@@ -67,8 +67,8 @@ tirar_foto_btn.addEventListener("click", function(e) {
 	var snap = tirarFoto();
 
 	// Mostrar imagem:
-	image.setAttribute('src', snap);
-	image.classList.add("visible");
+	imagem.setAttribute('src', snap);
+	imagem.classList.add("visible");
 
 	// Ativar os botões: excluir e salvar:
 	excluir_foto_btn.classList.remove("disabled");
@@ -85,8 +85,8 @@ excluir_foto_btn.addEventListener("click", function(e) {
 	e.preventDefault();
 
 	// Esconder a imagem:
-	image.setAttribute('src', "");
-	image.classList.remove("visible");
+	imagem.setAttribute('src', "");
+	imagem.classList.remove("visible");
 
 	// Desabilitar os botões: excluir e salvar:
 	excluir_foto_btn.classList.add("disabled");
@@ -120,7 +120,7 @@ function tirarFoto() {
 
     	context.drawImage(video, 0, 0, width, height);
 
-    	return esconder_canvas.toDataURL('image/png');
+    	return esconder_canvas.toDataURL('imagem/png');
 	}
 }
 
