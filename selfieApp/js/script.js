@@ -1,5 +1,3 @@
-"use strict";
-
 // Referências a todo o elemento que precisaremos.
 
 var video           	= document.querySelector('#camera-stream'),
@@ -45,7 +43,7 @@ if(!navigator.getMedia) {
 
 		// Callback - Error:
 		function(err) {
-			displayErrorMessage("Ococrreu um erro ao acessar o stream de vídeo " + err.name, err);
+			displayErrorMessage("Ocorreu um erro ao acessar o stream de vídeo " + err.name, err);
 		}
 	);
 }
@@ -100,7 +98,7 @@ excluir_foto_btn.addEventListener("click", function(e) {
 function mostrarVideo() {
 
 	// Mostrar o stream de video e os controles:
-	hiddenUI();
+	hideUI();
 	video.classList.add("visible");
 	controles.classList.add("visible");
 }
