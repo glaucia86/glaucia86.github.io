@@ -14,7 +14,7 @@ Desenvolvimento da Intro do filme épico e mais geek de todos os tempos: Star Wa
 ## Demo do projeto
 A demo do projeto pode ser vista por aqui:
 
-- [GH Pages developed by Glaucia Lemos]()
+- [GH Pages developed by Glaucia Lemos](http://glaucia86.github.io/appStarWars/)
 
 Ou se preferirir pode fazer o download ou git clone desse projeto. Depois descompactar a pasta e executar localmente abrindo o arquivo 'index.html'. Sugiro que instale as dependências via npm para que possa ser aberto via server! :D
 
