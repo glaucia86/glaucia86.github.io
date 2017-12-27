@@ -1,8 +1,8 @@
-#Projeto - Buy it Store! A sua compra certa! 
+# Projeto - Buy it Store! A sua compra certa! 
  
  Desenvolvimento de mais uma aplicação em Angular.Js, porém dessa vez com a versão 2 e mais com o TypeScript. O projeto tem como intenção criar um gerenciamento de produtos listados (já pré-definidos no products.json). O usuário pode listar um determinado produto usando um filtro e detalhar as especificações sobre o produto. O design do projeto foi realizado no conceito SPA (Single Page Application).
  
- ##Recursos utilizados no desenvolvimento:
+ ## Recursos utilizados no desenvolvimento:
  
 - Angular.Js 2 (versão RC1);
 - TypeScript;
@@ -11,7 +11,7 @@
 - Framework Bootstrap 3;
 - Conceito de SPA (Single Page Application);
  
-##Conceitos aprendidos durante o desenvolvimento do Projeto:
+## Conceitos aprendidos durante o desenvolvimento do Projeto:
  
 Durante o desenvolvimento desse projeto pude aprender as novas features do Angular 2 + TypeScript, juntamente com os novos e alguns conceitos do ES6. Entre esses:
  
