@@ -1,6 +1,6 @@
 # Tutorial: Desenvolvendo a Intro do filme Star Wars com HTML, CSS3 & JavaScript!
 
-Desenvolvimento da Intro do filme épico e mais geek de todos os tempos: Star Wars. Porém, todo feito em HTML, CSS 3 e JavaScript! :D. O tutorial segue no seu site: [Code4Coders] (www.code4coders.wordpress.com)
+Desenvolvimento da Intro do filme épico e mais geek de todos os tempos: Star Wars. Porém, todo feito em HTML, CSS 3 e JavaScript! :D. O tutorial segue no seu site: [Code4Coders](www.code4coders.wordpress.com)
 
 ## Recursos utilizados no desenvolvimento:
 
