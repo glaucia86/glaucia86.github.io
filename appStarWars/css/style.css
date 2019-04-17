@@ -58,7 +58,6 @@ body {
    animation: intro 2s ease-out 0s;
 }
 
-// Parte importante, onde se altera o tempo da história
 .historia_animacao {
     animation: paragrafos 80s linear 2s;
 }
