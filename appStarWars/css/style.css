@@ -59,7 +59,7 @@ body {
 }
 
 .historia_animacao {
-    animation: paragrafos 70s linear 2s;
+    animation: paragrafos 80s linear 2s;
 }
 
 @keyframes intro {
